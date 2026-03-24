@@ -1,0 +1,122 @@
+{
+  "test_run": "2026-03-24T17:15:56.619133",
+  "model": "llama-3.3-70b-versatile",
+  "total": 10,
+  "correct": 10,
+  "accuracy_pct": 100.0,
+  "good_correct": 5,
+  "bad_correct": 5,
+  "verdict": "PROCEED",
+  "results": [
+    {
+      "candidate_id": 1,
+      "label": "Experienced, Bangalore, reasonable salary",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate has 5 years of experience with young children, is located in Bangalore, available for daytime hours, has a reasonable salary expectation, and is open to live-in arrangements.",
+      "correct": true,
+      "latency_ms": 729,
+      "raw_response": "{\n  \"score\": 9,\n  \"verdict\": \"GOOD\",\n  \"reason\": \"The candidate has 5 years of experience with young children, is located in Bangalore, available for daytime hours, has a reasonable salary expectation, and is open to live-in arrangements.\"\n}"
+    },
+    {
+      "candidate_id": 2,
+      "label": "Certified, infant experience, flexible",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate meets all the criteria with 4 years of experience, location in Bangalore, availability for daytime hours, reasonable salary expectation, and a willingness to live-in.",
+      "correct": true,
+      "latency_ms": 501,
+      "raw_response": "{\n  \"score\": 9,\n  \"verdict\": \"GOOD\",\n  \"reason\": \"The candidate meets all the criteria with 4 years of experience, location in Bangalore, availability for daytime hours, reasonable salary expectation, and a willingness to live-in.\"\n}"
+    },
+    {
+      "candidate_id": 3,
+      "label": "7 years experience, very professional",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate has 7 years of experience with young children, is located in Bangalore, and has a reasonable salary expectation.",
+      "correct": true,
+      "latency_ms": 304,
+      "raw_response": "{\n  \"score\": 9,\n  \"verdict\": \"GOOD\",\n  \"reason\": \"The candidate has 7 years of experience with young children, is located in Bangalore, and has a reasonable salary expectation.\"\n}"
+    },
+    {
+      "candidate_id": 4,
+      "label": "Good experience, twins background, honest",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate has relevant experience, is located in Bangalore, and has reasonable availability and salary expectations.",
+      "correct": true,
+      "latency_ms": 410,
+      "raw_response": "{\n  \"score\": 9,\n  \"verdict\": \"GOOD\",\n  \"reason\": \"The candidate has relevant experience, is located in Bangalore, and has reasonable availability and salary expectations.\"\n}"
+    },
+    {
+      "candidate_id": 5,
+      "label": "Young but certified, eager, Bangalore",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate has 2+ years of experience, is located in Bangalore, available for daytime hours, has reasonable salary expectations, and is willing to live-in.",
+      "correct": true,
+      "latency_ms": 450,
+      "raw_response": "{\n  \"score\": 9,\n  \"verdict\": \"GOOD\",\n  \"reason\": \"The candidate has 2+ years of experience, is located in Bangalore, available for daytime hours, has reasonable salary expectations, and is willing to live-in.\"\n}"
+    },
+    {
+      "candidate_id": 6,
+      "label": "No experience, wrong city, unrealistic salary",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience, has high salary expectations, and limited availability, making her a poor fit for the nanny position.",
+      "correct": true,
+      "latency_ms": 572,
+      "raw_response": "{\n  \"score\": 2,\n  \"verdict\": \"BAD\",\n  \"reason\": \"Candidate lacks experience, has high salary expectations, and limited availability, making her a poor fit for the nanny position.\"\n}"
+    },
+    {
+      "candidate_id": 7,
+      "label": "Rude, no real childcare experience",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience with young children, has a high salary expectation, and is uncooperative with background checks and availability.",
+      "correct": true,
+      "latency_ms": 388,
+      "raw_response": "{\n  \"score\": 2,\n  \"verdict\": \"BAD\",\n  \"reason\": \"Candidate lacks experience with young children, has a high salary expectation, and is uncooperative with background checks and availability.\"\n}"
+    },
+    {
+      "candidate_id": 8,
+      "label": "Only older children experience, far location, high salary",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience with young children, is located far from Bangalore, and has unrealistic salary expectations and limited availability.",
+      "correct": true,
+      "latency_ms": 634,
+      "raw_response": "{\n  \"score\": 2,\n  \"verdict\": \"BAD\",\n  \"reason\": \"Candidate lacks experience with young children, is located far from Bangalore, and has unrealistic salary expectations and limited availability.\"\n}"
+    },
+    {
+      "candidate_id": 9,
+      "label": "Fired from previous jobs, no references, evasive",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks transparency about past jobs, is unwilling to provide references, and is unclear about availability.",
+      "correct": true,
+      "latency_ms": 308,
+      "raw_response": "{\n  \"score\": 2,\n  \"verdict\": \"BAD\",\n  \"reason\": \"Candidate lacks transparency about past jobs, is unwilling to provide references, and is unclear about availability.\"\n}"
+    },
+    {
+      "candidate_id": 10,
+      "label": "Distracted, unreliable, unclear experience",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks professional experience, has high salary expectations, and is not based in Bangalore.",
+      "correct": true,
+      "latency_ms": 319,
+      "raw_response": "{\n  \"score\": 2,\n  \"verdict\": \"BAD\",\n  \"reason\": \"Candidate lacks professional experience, has high salary expectations, and is not based in Bangalore.\"\n}"
+    }
+  ]
+}

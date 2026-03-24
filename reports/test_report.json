@@ -1,0 +1,395 @@
+{
+  "test_run": "2026-03-24T16:15:45.295829",
+  "total_calls": 10,
+  "successful_calls": 4,
+  "failed_calls": 6,
+  "average_latency_ms": 2351,
+  "slowest_turn_ms": 4018,
+  "fastest_turn_ms": 885,
+  "calls": [
+    {
+      "call_number": 1,
+      "status": "success",
+      "failure_reason": null,
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Dhanyavaad. To aapka poora naam kya hai?",
+          "latency_ms": 885,
+          "flagged_slow": false,
+          "timestamp": "16:15:48"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "Bahut achha, Priya ji. Ab kya aap apni umar bata sakti हैं?",
+          "latency_ms": 985,
+          "flagged_slow": false,
+          "timestamp": "16:15:50"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": "Samita ji, aapka swagat hai. Kripya apni umar bata dijiye, jisse hum aage baat kar sakein.",
+          "latency_ms": 1320,
+          "flagged_slow": true,
+          "timestamp": "16:15:52"
+        },
+        {
+          "turn": 4,
+          "candidate_input": "Meri umar 28 saal hai",
+          "agent_response": "Dhanyavaad Samita ji. Aap 23 saal ki हैं, yeh jaan ke achha laga. Aap abhi kis jagah par rehti हैं, yani aapka current location kya hai?",
+          "latency_ms": 1876,
+          "flagged_slow": true,
+          "timestamp": "16:15:55"
+        },
+        {
+          "turn": 5,
+          "candidate_input": "Main Bangalore mein rehti hoon, Marathahalli ke paas",
+          "agent_response": "Theek hai Samita ji, Bangalore ke Marathahalli ke paas. Ab mujhe bataiye, aapke paas bacchon ki dekhbhal ka kitna anubhav hai?",
+          "latency_ms": 3241,
+          "flagged_slow": true,
+          "timestamp": "16:15:59"
+        },
+        {
+          "turn": 6,
+          "candidate_input": "Mujhe 3 saal ka experience hai, chote bachon ke saath",
+          "agent_response": "Bahut achha, 3 saal ka experience hai. Ab aapki availability ke baare mein jaana chahta hoon—kya aap full-time kaam kar sakti हैं, aur kis dinon ya ghanton mein sabse zyada uplabdh रहती हैं?",
+          "latency_ms": 2692,
+          "flagged_slow": true,
+          "timestamp": "16:16:04"
+        },
+        {
+          "turn": 7,
+          "candidate_input": "Main subah 8 baje se sham 6 baje tak available hoon",
+          "agent_response": "Samita ji, aap subah 6 baje se shaam 6 baje tak available hain, yeh jaan kar achha laga. Ab aapse do sawal aur: aap apni expected salary kya rakhna chahti हैं, aur kya aap live-in nanny ki tarah ghar par reh kar kaam kar sakti हैं?",
+          "latency_ms": 3229,
+          "flagged_slow": true,
+          "timestamp": "16:16:09"
+        },
+        {
+          "turn": 8,
+          "candidate_input": "Mujhe 12 se 15 hazaar chahiye",
+          "agent_response": "Theek hai, aap 12-15 hazaar ki salary expect karti हैं. Aur kya aap live-in arrangement, yani ghar par reh kar kaam karna, sambhal sakti हैं?",
+          "latency_ms": 2466,
+          "flagged_slow": true,
+          "timestamp": "16:16:14"
+        },
+        {
+          "turn": 9,
+          "candidate_input": "Nahi, main live-in nahi kar sakti",
+          "agent_response": "Samajh gaya, aap live-in nahi kar saktiं. Yeh sab jaankari dene ke liye dhanyavaad. Ab tak ke sawalon ka jawab mil gaya hai. Agar aapke paas apne childcare experience ke kisi khaas pehlu par kuch aur kehna ho, ya koi sawal ho, to zaroor bataye.",
+          "latency_ms": 3891,
+          "flagged_slow": true,
+          "timestamp": "16:16:19"
+        },
+        {
+          "turn": 10,
+          "candidate_input": "Theek hai, shukriya",
+          "agent_response": "Aapka swagat hai, Samita ji. Hum aapki details record kar lenge aur agar koi suitable family milti है to hum aapse sampark karenge. Aapke samay ke liye dhanyavaad, aur aapka din shubh ho.",
+          "latency_ms": 2775,
+          "flagged_slow": true,
+          "timestamp": "16:16:24"
+        }
+      ]
+    },
+    {
+      "call_number": 2,
+      "status": "success",
+      "failure_reason": null,
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "धन्यवाद, कृपया अपना पूरा नाम बताएं। उसके बाद मैं आपकी उम्र पूछूँगा/पूछूँगी।",
+          "latency_ms": 1423,
+          "flagged_slow": true,
+          "timestamp": "16:16:40"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "धन्यवाद अंबोई जी। कृपया अपनी उम्र बताएं, और आप अभी किस शहर या इलाके में रहते हैं?",
+          "latency_ms": 1429,
+          "flagged_slow": true,
+          "timestamp": "16:16:43"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": "बहुत अच्छा, सुनीता जी, आपसे मिलकर खुशी हुई। कृपया बताएं आपकी उम्र कितनी है और आप अभी किस शहर या इलाके में रहते हैं?",
+          "latency_ms": 1763,
+          "flagged_slow": true,
+          "timestamp": "16:16:46"
+        },
+        {
+          "turn": 4,
+          "candidate_input": "Meri umar 28 saal hai",
+          "agent_response": "धन्यवाद सुनीता जी। अब बताएं कि आप किस शहर या इलाके में रहती हैं? इससे हमें आपकी जगह का अंदाज़ा होगा।",
+          "latency_ms": 1818,
+          "flagged_slow": true,
+          "timestamp": "16:16:49"
+        },
+        {
+          "turn": 5,
+          "candidate_input": "Main Bangalore mein rehti hoon, Marathahalli ke paas",
+          "agent_response": "ठीक है सुनीता जी, अब मैं यह जानना चाहूँगा कि बच्चों की देखभाल में आपका अनुभव कितना है। आपने कितने वर्षों तक बच्चों के साथ काम किया है और किस उम्र के बच्चों का ध्यान रखा है?",
+          "latency_ms": 2564,
+          "flagged_slow": true,
+          "timestamp": "16:16:52"
+        },
+        {
+          "turn": 6,
+          "candidate_input": "Mujhe 3 saal ka experience hai, chote bachon ke saath",
+          "agent_response": "अच्छा, तीन साल का अनुभव है, यह सुनकर अच्छा लगा। अब बताइए, आप किन दिनों और किन घंटों में उपलब्ध रहती हैं? क्या आप फुल-टाइम या पार्ट-टाइम काम करने में रुचि रखती हैं?",
+          "latency_ms": 2485,
+          "flagged_slow": true,
+          "timestamp": "16:16:57"
+        },
+        {
+          "turn": 7,
+          "candidate_input": "Main subah 8 baje se sham 6 baje tak available hoon",
+          "agent_response": "बहुत बढ़िया, 6 बजे से शाम 6 बजे तक आपका समय है। क्या आप हफ़्ते के सभी दिन उपलब्ध हैं या कुछ ख़ास दिन पसंद हैं? और इसके साथ ही, कृपया बताएं आपकी वेतन की क्या अपेक्षा है, मासिक या प्रति घंटा?",
+          "latency_ms": 3374,
+          "flagged_slow": true,
+          "timestamp": "16:17:02"
+        },
+        {
+          "turn": 8,
+          "candidate_input": "Mujhe 12 se 15 hazaar chahiye",
+          "agent_response": "समझ गया, आपकी अपेक्षा 12 से 15 हज़ार रुपये मासिक है। इसके अलावा, क्या आप परिवार के साथ घर में रहकर (लिव-इन) काम करने के लिए तैयार हैं, या आप केवल आने-जाने वाली नानी का काम चाहेंगी?",
+          "latency_ms": 3159,
+          "flagged_slow": true,
+          "timestamp": "16:17:07"
+        },
+        {
+          "turn": 9,
+          "candidate_input": "Nahi, main live-in nahi kar sakti",
+          "agent_response": "कोई बात नहीं, आप केवल आने-जाने वाली भूमिका चाहती हैं, यह स्पष्ट है। आपने सारी जानकारी दी, उसका धन्यवाद। अभी के लिए आख़िरी सवाल, क्या आपके पास बच्चों की देखभाल से जुड़ा कोई प्रमाणपत्र, जैसे फर्स्ट एड या सीपीआर ट्रेनिंग, है?",
+          "latency_ms": 3415,
+          "flagged_slow": true,
+          "timestamp": "16:17:12"
+        },
+        {
+          "turn": 10,
+          "candidate_input": "Theek hai, shukriya",
+          "agent_response": "धन्यवाद सुनीता जी, आपने समय दिया। अगर भविष्य में आप कोई प्रमाणपत्र लेते हैं, तो हमें बताइएगा। हमारी टीम आपकी जानकारी की समीक्षा करेगी और जल्द ही आपसे संपर्क करेगी। क्या आपके पास कोई और सवाल है जिसे मैं अभी स्पष्ट कर सकूँ?",
+          "latency_ms": 3462,
+          "flagged_slow": true,
+          "timestamp": "16:17:17"
+        }
+      ]
+    },
+    {
+      "call_number": 3,
+      "status": "success",
+      "failure_reason": null,
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "धन्यवाद। कृपया अपना पूरा नाम बताएं, ताकि मैं आपको सही तरह से संबोधित कर सकूं।",
+          "latency_ms": 1065,
+          "flagged_slow": true,
+          "timestamp": "16:17:31"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "बहुत अच्छा, अंबो जी। अब कृपया यह बताएं कि आपकी उम्र कितनी है और आप अभी किस शहर या इलाके में रह रही हैं?",
+          "latency_ms": 1498,
+          "flagged_slow": true,
+          "timestamp": "16:17:33"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": "धन्यवाद सुनीता जी, मुझे आपका नाम जानकर खुशी हुई। अब कृपया अपनी उम्र और आप वर्तमान में किस शहर में रहती हैं, यह बताएं, ताकि मैं आगे की जानकारी ले सकूँ।",
+          "latency_ms": 2117,
+          "flagged_slow": true,
+          "timestamp": "16:17:36"
+        },
+        {
+          "turn": 4,
+          "candidate_input": "Meri umar 28 saal hai",
+          "agent_response": "समझ गया, 30 साल की उम्र में आपकी अच्छी अनुभव हो सकती है। अब बताएं, आप किस शहर या इलाके में रहती हैं?",
+          "latency_ms": 1789,
+          "flagged_slow": true,
+          "timestamp": "16:17:40"
+        },
+        {
+          "turn": 5,
+          "candidate_input": "Main Bangalore mein rehti hoon, Marathahalli ke paas",
+          "agent_response": "अच्छा, बांग्ला में रहती हैं, सही। तो बताइए सुनीता जी, बच्चों की देखभाल का आपका अनुभव कितना सालों का और किस उम्र के बच्चों के साथ रहा है?",
+          "latency_ms": 2004,
+          "flagged_slow": true,
+          "timestamp": "16:17:43"
+        },
+        {
+          "turn": 6,
+          "candidate_input": "Mujhe 3 saal ka experience hai, chote bachon ke saath",
+          "agent_response": "बहुत बढ़िया, तीन साल का अनुभव है तो आप काफी चीज़ों से परिचित होंगी। अब मैं जानना चाहूँगा कि आप किस तरह की उपलब्धता रखती हैं – पूरा समय, आधा समय, या लचीले घंटे, और क्या आप लाइव-इन यानी परिवार के साथ रहकर काम करने के लिए तैयार हैं?",
+          "latency_ms": 3506,
+          "flagged_slow": true,
+          "timestamp": "16:17:48"
+        },
+        {
+          "turn": 7,
+          "candidate_input": "Main subah 8 baje se sham 6 baje tak available hoon",
+          "agent_response": "ठीक है, 6 बजे सुबह से 7 बजे शाम तक आप उपलब्ध रहेंगी। क्या आप परिवार के साथ रहकर लाइव-इन के रूप में काम करने में सहज हैं, या आप दिन में जाकर काम करना ही पसंद करेंगी?",
+          "latency_ms": 2592,
+          "flagged_slow": true,
+          "timestamp": "16:17:53"
+        },
+        {
+          "turn": 8,
+          "candidate_input": "Mujhe 12 se 15 hazaar chahiye",
+          "agent_response": "समझ गया, आप महीने के लगभग 15 हज़ार रुपये की अपेक्षा रखती हैं। धन्यवाद, यह जानकारी उपयोगी है। अंत में यह बताएं कि क्या आप लाइव-इन काम करने के लिए तैयार हैं या केवल दिन के समय ही काम करना चाहेंगी? इससे हम आपकी पसंद के अनुसार भूमिका ढूंढ सकेंगे।",
+          "latency_ms": 3648,
+          "flagged_slow": true,
+          "timestamp": "16:17:58"
+        },
+        {
+          "turn": 9,
+          "candidate_input": "Nahi, main live-in nahi kar sakti",
+          "agent_response": "ठीक है सुनीता जी, धन्यवाद यह स्पष्ट करने के लिए। तो आप दिन में आकर काम करना पसंद करेंगी। अब आख़िरी दो सवाल हैं: आप कब से काम शुरू कर सकती हैं, और क्या आपके पास कोई रेफरेंस या सिफारिशें हैं जिन्हें हम जांच सकें?",
+          "latency_ms": 3290,
+          "flagged_slow": true,
+          "timestamp": "16:18:03"
+        },
+        {
+          "turn": 10,
+          "candidate_input": "Theek hai, shukriya",
+          "agent_response": "आपका भी धन्यवाद सुनीता जी। कृपया बता दें कि आप काम कब से शुरू कर सकती हैं, और क्या आपके पास कोई रेफरेंस हैं जिन्हें हम संपर्क कर सकें? दोनों जानकारी मिलने पर हम अगला कदम तय करेंगे।",
+          "latency_ms": 3026,
+          "flagged_slow": true,
+          "timestamp": "16:18:09"
+        }
+      ]
+    },
+    {
+      "call_number": 4,
+      "status": "success",
+      "failure_reason": null,
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "धन्यवाद। कृपया अपना पूरा नाम बताइए, और आपकी उम्र कितनी है?",
+          "latency_ms": 978,
+          "flagged_slow": false,
+          "timestamp": "16:18:22"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "ठीक है, अपना नाम बता दीजिए, हम आगे बात करेंगे। आपकी उम्र और वर्तमान लोकेशन की जानकारी भी ज़रूरी है।",
+          "latency_ms": 1839,
+          "flagged_slow": true,
+          "timestamp": "16:18:25"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": "बहुत धन्यवाद, स्मिता जी। कृपया बताइए, आपकी उम्र कितनी है?",
+          "latency_ms": 982,
+          "flagged_slow": false,
+          "timestamp": "16:18:28"
+        },
+        {
+          "turn": 4,
+          "candidate_input": "Meri umar 28 saal hai",
+          "agent_response": "धन्यवाद, स्मिता जी। आप अभी किस शहर या इलाके में रहती हैं?",
+          "latency_ms": 1173,
+          "flagged_slow": true,
+          "timestamp": "16:18:30"
+        },
+        {
+          "turn": 5,
+          "candidate_input": "Main Bangalore mein rehti hoon, Marathahalli ke paas",
+          "agent_response": "ठीक है, बांग्लोर मरतहाली के पास। अब मैं जानना चाहूँगा कि आपके पास बच्चों की देखभाल का कितना अनुभव है। आपने कितने समय तक या कितनी उम्र के बच्चों की देखभाल की है?",
+          "latency_ms": 2409,
+          "flagged_slow": true,
+          "timestamp": "16:18:33"
+        },
+        {
+          "turn": 6,
+          "candidate_input": "Mujhe 3 saal ka experience hai, chote bachon ke saath",
+          "agent_response": "बहुत अच्छा, तीन साल का अनुभव है तो काफी महत्वपूर्ण है। अब बताइए, आप किस तरह की उपलब्धता रखती हैं? क्या आप फुल-टाइम काम कर सकती हैं और क्या आप परिवार के साथ रहकर (लिव-इन) काम कर सकती हैं?",
+          "latency_ms": 2728,
+          "flagged_slow": true,
+          "timestamp": "16:18:38"
+        },
+        {
+          "turn": 7,
+          "candidate_input": "Main subah 8 baje se sham 6 baje tak available hoon",
+          "agent_response": "ठीक है, सुबह 6 बजे से शाम 7 बजे तक उपलब्ध हैं। क्या आप परिवार के साथ रहकर काम करने, यानी लिव-इन व्यवस्था के लिए तैयार हैं, या आप रोज़ाना आने-जाने वाली जॉब ही चाहती हैं?",
+          "latency_ms": 4018,
+          "flagged_slow": true,
+          "timestamp": "16:18:43"
+        },
+        {
+          "turn": 8,
+          "candidate_input": "Mujhe 12 se 15 hazaar chahiye",
+          "agent_response": "समझ गया, आपकी अपेक्षित सैलरी 15,000 रुपये मासिक है। आखिरी सवाल, क्या आप परिवार के साथ रहकर लिव-इन के लिए तैयार हैं या केवल आना-जाना ही पसंद करेंगी?",
+          "latency_ms": 2467,
+          "flagged_slow": true,
+          "timestamp": "16:18:49"
+        },
+        {
+          "turn": 9,
+          "candidate_input": "Nahi, main live-in nahi kar sakti",
+          "agent_response": "कोई बात नहीं, सिर्फ़ आना-जाना भी ठीक है। फिलहाल आपने जो जानकारी दी, उसे मैं नोट कर रही हूँ। अगर कोई और प्रश्न या जानकारी हो तो बता दीजिए, नहीं तो हम आगे की प्रक्रिया के लिए आपसे जल्द संपर्क करेंगे।",
+          "latency_ms": 2978,
+          "flagged_slow": true,
+          "timestamp": "16:18:53"
+        },
+        {
+          "turn": 10,
+          "candidate_input": "Theek hai, shukriya",
+          "agent_response": "आपका भी धन्यवाद, स्मिता जी। हम जल्द ही आपको सूचित करेंगे। आपका दिन शुभ हो.",
+          "latency_ms": 1692,
+          "flagged_slow": true,
+          "timestamp": "16:18:58"
+        }
+      ]
+    },
+    {
+      "call_number": 5,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    },
+    {
+      "call_number": 6,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    },
+    {
+      "call_number": 7,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    },
+    {
+      "call_number": 8,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    },
+    {
+      "call_number": 9,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    },
+    {
+      "call_number": 10,
+      "status": "failed",
+      "failure_reason": "connection_failure: timed out during opening handshake",
+      "turns": []
+    }
+  ]
+}

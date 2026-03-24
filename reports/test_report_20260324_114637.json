@@ -1,0 +1,251 @@
+{
+  "test_run": "2026-03-24T11:41:15.711713",
+  "total_calls": 10,
+  "successful_calls": 0,
+  "failed_calls": 10,
+  "average_latency_ms": 4275,
+  "slowest_turn_ms": 4887,
+  "fastest_turn_ms": 3764,
+  "calls": [
+    {
+      "call_number": 1,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4887,
+          "flagged_slow": true,
+          "timestamp": "11:41:26"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:41:34",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 2,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4029,
+          "flagged_slow": true,
+          "timestamp": "11:42:00"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:42:07",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 3,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 3970,
+          "flagged_slow": true,
+          "timestamp": "11:42:32"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:42:39",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 4,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4635,
+          "flagged_slow": true,
+          "timestamp": "11:43:04"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8000,
+          "flagged_slow": true,
+          "timestamp": "11:43:13",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 5,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 3983,
+          "flagged_slow": true,
+          "timestamp": "11:43:38"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:43:45",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 6,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4202,
+          "flagged_slow": true,
+          "timestamp": "11:44:10"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:44:17",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 7,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 3764,
+          "flagged_slow": true,
+          "timestamp": "11:44:42"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:44:49",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 8,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4627,
+          "flagged_slow": true,
+          "timestamp": "11:45:14"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:45:22",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 9,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4541,
+          "flagged_slow": true,
+          "timestamp": "11:45:47"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:45:55",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    },
+    {
+      "call_number": 10,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (8.0s) — no agent_response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "[warm] ನಮಸ್ಕಾರ! ನಾನು ಪ್ರಿಯಾ, ಸೂಪರ್‌ನ್ಯಾನ್ ಚೈಲ್ಡ್‌ಕೇರ್ ಸೊಲ್ಯೂಷನ್ಸ್ ಇಂದ ಮಾತಾಡ್ತಿದ್ದೀನಿ. ನೀವು ನಮ್ಮ ಹತ್ತಿರ ಬೇಬಿ ಕೇರ್ ಕೆಲಸ ಬಗ್ಗೆ ಅಪ್ಲೈ ಮಾಡಿದ್ದ್ರಿ, ಆ ಬಗ್ಗೆ ಮಾತಾಡೋಕೆ ಕಾಲ್ ಮಾಡ್ತಿದ್ದೀನಿ.",
+          "latency_ms": 4112,
+          "flagged_slow": true,
+          "timestamp": "11:46:21"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 8001,
+          "flagged_slow": true,
+          "timestamp": "11:46:28",
+          "error": "Timeout (8.0s) — no agent_response received"
+        }
+      ]
+    }
+  ]
+}

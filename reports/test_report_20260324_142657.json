@@ -1,0 +1,171 @@
+{
+  "test_run": "2026-03-24T14:21:46.961640",
+  "total_calls": 10,
+  "successful_calls": 0,
+  "failed_calls": 10,
+  "average_latency_ms": 0,
+  "slowest_turn_ms": 0,
+  "fastest_turn_ms": 0,
+  "calls": [
+    {
+      "call_number": 1,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20000,
+          "flagged_slow": true,
+          "timestamp": "14:21:52",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 2,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:22:26",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 3,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:23:00",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 4,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:23:32",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 5,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:24:03",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 6,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:24:33",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 7,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:25:03",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 8,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20000,
+          "flagged_slow": true,
+          "timestamp": "14:25:34",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 9,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:26:04",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    },
+    {
+      "call_number": 10,
+      "status": "failed",
+      "failure_reason": "timeout on turn 1: Timeout (20.0s) — no agent response received",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": null,
+          "latency_ms": 20001,
+          "flagged_slow": true,
+          "timestamp": "14:26:34",
+          "error": "Timeout (20.0s) — no agent response received"
+        }
+      ]
+    }
+  ]
+}

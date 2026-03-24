@@ -1,0 +1,267 @@
+{
+  "test_run": "2026-03-23T23:25:58.656365",
+  "total_calls": 10,
+  "successful_calls": 0,
+  "failed_calls": 10,
+  "average_latency_ms": 1158,
+  "slowest_turn_ms": 2532,
+  "fastest_turn_ms": 517,
+  "calls": [
+    {
+      "call_number": 1,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 705,
+          "flagged_slow": false,
+          "timestamp": "23:26:07"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3000,
+          "flagged_slow": true,
+          "timestamp": "23:26:08",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 2,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 617,
+          "flagged_slow": false,
+          "timestamp": "23:26:22"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:26:23",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 3,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 2532,
+          "flagged_slow": true,
+          "timestamp": "23:26:36"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:26:39",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 4,
+      "status": "failed",
+      "failure_reason": "timeout on turn 3: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 673,
+          "flagged_slow": false,
+          "timestamp": "23:26:53"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "The previous response was in Hindi. Would you like me to continue in Hindi or switch to English?",
+          "latency_ms": 2430,
+          "flagged_slow": true,
+          "timestamp": "23:26:54"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:26:57",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 5,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 587,
+          "flagged_slow": false,
+          "timestamp": "23:27:10"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:27:11",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 6,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 613,
+          "flagged_slow": false,
+          "timestamp": "23:27:25"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:27:26",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 7,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 705,
+          "flagged_slow": false,
+          "timestamp": "23:27:39"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:27:40",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 8,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 694,
+          "flagged_slow": false,
+          "timestamp": "23:27:54"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:27:55",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 9,
+      "status": "failed",
+      "failure_reason": "timeout on turn 2: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 517,
+          "flagged_slow": false,
+          "timestamp": "23:28:08"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:28:09",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    },
+    {
+      "call_number": 10,
+      "status": "failed",
+      "failure_reason": "timeout on turn 3: Timeout (3.0s) waiting for agent_response",
+      "turns": [
+        {
+          "turn": 1,
+          "candidate_input": "Haan ji",
+          "agent_response": "Hello! How can I help you today?",
+          "latency_ms": 2115,
+          "flagged_slow": true,
+          "timestamp": "23:28:23"
+        },
+        {
+          "turn": 2,
+          "candidate_input": "Haan, bol sakte hain",
+          "agent_response": "Aapne \"Haan ji Haan, bol sakte hain\" kaha. Kya aapke paas koi sawal hai ya aap kuch kehna chahte hain?",
+          "latency_ms": 1709,
+          "flagged_slow": true,
+          "timestamp": "23:28:25"
+        },
+        {
+          "turn": 3,
+          "candidate_input": "Mera naam Sunita hai",
+          "agent_response": null,
+          "latency_ms": 3001,
+          "flagged_slow": true,
+          "timestamp": "23:28:27",
+          "error": "Timeout (3.0s) waiting for agent_response"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "test_run": "2026-03-25T13:26:41.782201",
+  "route": "B",
+  "agent_id": "agent_5101kmcq15wbfwzsz8vg95p448hb",
+  "total": 3,
+  "successful": 3,
+  "avg_latency_ms": 9202,
+  "results": [
+    {
+      "candidate_id": 1,
+      "label": "Good candidate — experienced, Bangalore",
+      "conversation_id": "conv_7001kmhzmbjse7psksc8hv53hrjk",
+      "success": true,
+      "turn_latencies": [
+        5047,
+        15001,
+        20,
+        15001,
+        0,
+        15000,
+        15001
+      ],
+      "avg_latency_ms": 9295,
+      "turns_completed": 7
+    },
+    {
+      "candidate_id": 2,
+      "label": "Bad candidate — no experience, wrong city",
+      "conversation_id": "conv_2801kmhzqkzcfd29evkkq0r1r1fz",
+      "success": true,
+      "turn_latencies": [
+        3692,
+        15001,
+        15000,
+        15000,
+        106,
+        15001,
+        107
+      ],
+      "avg_latency_ms": 9129,
+      "turns_completed": 7
+    },
+    {
+      "candidate_id": 3,
+      "label": "Interruption — jumps to salary early",
+      "conversation_id": "conv_8801kmhztt9ffjyrn9wg5acc3rc7",
+      "success": true,
+      "turn_latencies": [
+        3947,
+        15001,
+        15001,
+        122,
+        15000,
+        208,
+        15001
+      ],
+      "avg_latency_ms": 9182,
+      "turns_completed": 7
+    }
+  ]
+}

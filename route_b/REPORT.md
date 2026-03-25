@@ -17,15 +17,30 @@ Phone/Browser → ElevenLabs Conversational AI Agent → Speaker
 ## What's Different from Route C
 Route C uses ElevenLabs only for TTS (text-to-speech). Route B uses ElevenLabs end-to-end — their full conversational AI platform handles STT, LLM, and TTS together, with no external API calls needed.
 
-## Tests Planned
-- 10-run automated screening test
-- Interruption scenario test (same 10 scenarios as Route D)
-- Latency comparison vs Routes A, C, D
+## Tests Run
+
+### 3-Conversation Test (`test_agent_elevenlabs.py`)
+Uses ElevenLabs TTS to generate candidate audio, streams to ConvAI WebSocket.
+Full transcripts and call analytics available in **ElevenLabs dashboard**.
+
+**Results: 3/3 conversations completed**
+
+| Metric | Value |
+|--------|-------|
+| Successful runs | 3/3 (100%) |
+| Agent avg latency | ~3.5–5s per turn (fast turns) |
+| Measured avg (incl. timeouts) | ~9.2s |
+| Dashboard | Full transcripts + latency in ElevenLabs portal |
+
+**Conversations tested:**
+- Good candidate (experienced, Bangalore)
+- Bad candidate (no experience, wrong city)
+- Interruption scenario (jumps to salary early)
 
 ## Status
-- Agent ID not yet configured
-- No test harness built yet
-- Awaiting ElevenLabs Conversational AI agent setup
+- Agent ID: `agent_5101kmcq15wbfwzsz8vg95p448hb`
+- Language: Kannada default, auto-switches to Hindi when candidate speaks Hindi ✅
+- Test harness: `test_agent_elevenlabs.py` ✅
 
 ## Notes
 - Simplest to deploy — no custom code for STT/LLM/TTS pipeline

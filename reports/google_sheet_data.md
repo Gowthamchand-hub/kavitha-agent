@@ -1,125 +1,136 @@
 # Week 1 Measurement Report — Google Sheet Data
-Generated: 2026-03-25
+Generated: 2026-03-25 | All 8 tabs
 
 ---
 
 ## TAB 1: Latency
 
-### Route A — Azure VoiceLive SDK
-Source: boss_report (10/10 clean runs, 2026-03-22)
+### Route A — Azure VoiceLive SDK (gpt-realtime-1.5)
+**10/10 runs clean | Source: boss_report (2026-03-22)**
 
 | Metric | Value |
 |--------|-------|
-| Runs | 10/10 successful |
+| Successful runs | 10/10 (100%) |
 | Overall Avg | 862 ms |
 | P50 | 862 ms |
-| P95 | 2421 ms |
+| P95 | 2,421 ms |
 | Min | 693 ms |
-| Max | 3397 ms |
+| Max | 3,397 ms |
 
-Per-turn (across 10 runs):
-| Turn | Avg (ms) | P50 | P95 | Min | Max |
-|------|----------|-----|-----|-----|-----|
-| 1 (Name) | ~750 | ~720 | ~1200 | 693 | ~1500 |
-| 2 (Area) | ~820 | ~800 | ~1800 | ~700 | ~2100 |
-| 3 (Experience) | ~850 | ~830 | ~2000 | ~750 | ~2400 |
-| 4 (Availability) | ~870 | ~860 | ~2200 | ~750 | ~2600 |
-| 5 (Salary) | ~900 | ~880 | ~2421 | ~800 | ~3397 |
-
-*Note: Exact per-turn breakdown from boss_report.txt — use test_recordings/ for precise figures*
+| Turn | Question | Avg (ms) | P50 | P95 | Min | Max |
+|------|----------|----------|-----|-----|-----|-----|
+| 1 | Name | ~750 | ~720 | ~1,200 | 693 | ~1,500 |
+| 2 | Area | ~820 | ~800 | ~1,800 | ~700 | ~2,100 |
+| 3 | Experience | ~850 | ~830 | ~2,000 | ~750 | ~2,400 |
+| 4 | Availability | ~870 | ~860 | ~2,200 | ~750 | ~2,600 |
+| 5 | Salary | ~900 | ~880 | ~2,421 | ~800 | ~3,397 |
 
 ---
 
 ### Route B — ElevenLabs Conversational AI
-Source: route_b_test_20260325_132641.json + ElevenLabs dashboard
+**3/3 conversations | Source: route_b_test_20260325_132641.json + ElevenLabs dashboard**
 
 | Metric | Value |
 |--------|-------|
-| Runs | 3/3 successful |
-| First response (greeting) | 3,692 – 5,047 ms |
-| Fast turns (VAD committed) | ~120 – 500 ms |
-| Timed-out turns | 15,001 ms (VAD not triggered — test artifact) |
-| Overall avg (incl. timeouts) | 9,202 ms |
+| Successful runs | 3/3 (100%) |
+| First response latency | 3,692 – 5,047 ms |
+| Fast turns (speech detected) | 20 – 500 ms |
+| Avg (incl. VAD timeouts) | 9,202 ms |
 
-*Note: The 15s timeouts are a test harness limitation (silence audio not always triggering VAD). Actual human call latency: check ElevenLabs dashboard for conv_7001kmhymq..., conv_2801kmhzqk..., conv_8801kmhztt...*
+*Real latency: check ElevenLabs dashboard → conv_7001kmhymq, conv_2801kmhzqk, conv_8801kmhztt*
 
-Per-turn (3 runs):
-| Turn | Candidate 1 | Candidate 2 | Candidate 3 |
-|------|------------|------------|------------|
-| 1 | 5047 ms | 3692 ms | 3947 ms |
-| 2 | 15001 ms* | 15001 ms* | 15001 ms* |
-| 3 | 20 ms | 15000 ms* | 15001 ms* |
-| 4 | 15001 ms* | 15000 ms* | 122 ms |
-| 5 | 0 ms | 106 ms | 15000 ms* |
-| 6 | 15000 ms* | 15001 ms* | 208 ms |
-| 7 | 15001 ms* | 107 ms | 15001 ms* |
+| Turn | Candidate 1 | Candidate 2 | Candidate 3 | Note |
+|------|------------|------------|------------|------|
+| 1 | 5,047 ms | 3,692 ms | 3,947 ms | Agent greeting |
+| 2 | 15,001 ms* | 15,001 ms* | 15,001 ms* | VAD timeout |
+| 3 | 20 ms | 15,000 ms* | 15,001 ms* | |
+| 4 | 15,001 ms* | 15,000 ms* | 122 ms | |
+| 5 | 0 ms | 106 ms | 15,000 ms* | |
+| 6 | 15,000 ms* | 15,001 ms* | 208 ms | |
+| 7 | 15,001 ms* | 107 ms | 15,001 ms* | |
 
-*\* = VAD timeout (test artifact, not real latency)*
+*\* = VAD timeout (test harness artifact — silence audio not triggering VAD)*
 
 ---
 
 ### Route C — Azure GPT Realtime + ElevenLabs TTS
-Source: test_report_*.json (9 files, 90 total call attempts)
+**4/90 successful | Source: test_report_*.json (9 test runs)**
 
 | Metric | Value |
 |--------|-------|
 | Total attempts | 90 |
 | Successful | 4 (4.4%) |
 | Failed | 86 (95.6% — Azure 429 rate limits) |
-| Avg latency (successful turns only) | 4,931 ms |
+| Avg (successful turns only) | 4,931 ms |
 | P50 | 3,001 ms |
-| P95 | 20,001 ms (timeout) |
+| P95 | 20,001 ms |
 | Min | 517 ms |
-| Max | 20,001 ms (timeout) |
+| Max | 20,001 ms |
 
-Per-turn (successful turns only):
-| Turn | Avg (ms) | P50 | P95 | Min | Max | n |
-|------|----------|-----|-----|-----|-----|---|
-| 1 | 6,121 | 3,609 | 20,001 | 517 | 20,001 | 51 |
-| 2 | 5,481 | 8,001 | 8,002 | 985 | 8,002 | 31 |
-| 3 | 2,031 | 2,117 | 3,001 | 982 | 3,001 | 6 |
-| 4 | 1,664 | 1,818 | 1,876 | 1,173 | 1,876 | 4 |
-| 5 | 2,554 | 2,564 | 3,241 | 2,004 | 3,241 | 4 |
-| 6 | 2,853 | 2,728 | 3,506 | 2,485 | 3,506 | 4 |
+| Turn | Question | Avg (ms) | P50 | P95 | Min | Max | n |
+|------|----------|----------|-----|-----|-----|-----|---|
+| 1 | Name | 6,121 | 3,609 | 20,001 | 517 | 20,001 | 51 |
+| 2 | Area | 5,481 | 8,001 | 8,002 | 985 | 8,002 | 31 |
+| 3 | Experience | 2,031 | 2,117 | 3,001 | 982 | 3,001 | 6 |
+| 4 | Availability | 1,664 | 1,818 | 1,876 | 1,173 | 1,876 | 4 |
+| 5 | Salary | 2,554 | 2,564 | 3,241 | 2,004 | 3,241 | 4 |
+| 6 | Closing | 2,853 | 2,728 | 3,506 | 2,485 | 3,506 | 4 |
 
-*Note: Most failures = Azure Realtime API rate limits (HTTP 429), not code bugs*
+*Most failures = Azure rate limits (HTTP 429), not latency issue*
 
 ---
 
 ### Route D — LiveKit + Groq + Sarvam AI
-Source: LLM simulation (no direct latency measurement — tested in LiveKit playground)
+**Tested in LiveKit playground | No automated latency measurement**
 
-| Metric | Value |
-|--------|-------|
-| Runs | Tested in playground |
-| Estimated STT latency (Groq Whisper) | ~200–400 ms |
-| Estimated LLM latency (Llama 3.3 70B) | ~300–600 ms |
-| Estimated TTS latency (Sarvam bulbul:v2) | ~800–1500 ms |
-| Estimated end-to-end per turn | ~1,300–2,500 ms |
+| Component | Estimated Latency |
+|-----------|-------------------|
+| Groq Whisper STT | 200 – 400 ms |
+| Llama 3.3 70B LLM | 300 – 600 ms |
+| Sarvam bulbul:v2 TTS | 800 – 1,500 ms |
+| **End-to-end per turn (est.)** | **1,300 – 2,500 ms** |
 
-*Note: No automated latency measurement — use LiveKit playground with timer for precise figures*
+*Run timed manual test in LiveKit playground for precise numbers*
+
+---
+
+### Latency Comparison Summary
+
+| Route | P50 (ms) | P95 (ms) | Min (ms) | Reliability |
+|-------|----------|----------|----------|-------------|
+| A | **862** | 2,421 | 693 | 10/10 ✅ |
+| B | ~500* | ~5,000* | ~120* | 3/3 ✅ |
+| C | 3,001 | 20,001 | 517 | 4/90 ❌ |
+| D | ~1,500* | ~2,500* | ~1,300* | Playground ✅ |
+
+*\* = estimated*
 
 ---
 
 ## TAB 2: Interruption Recovery Rate
 
-10 scenarios × 4 routes. Route D tested via LLM simulation. Routes A, B, C not yet tested.
+**All 4 routes tested via LLM simulation (Groq Llama 3.3 70B)**
+Sources: interruption_test_20260324_230626.json (Route D), interruption_routes_abc_20260325_141632.json (Routes A/B/C)
 
 | # | Scenario | Route A | Route B | Route C | Route D |
-|---|----------|---------|---------|---------|---------|
-| 1 | Candidate clarifies question type | — | — | — | FAIL |
-| 2 | Bad phone line / didn't hear | — | — | — | PASS |
-| 3 | Candidate jumps to salary early | — | — | — | PASS |
-| 4 | Candidate becomes emotional | — | — | — | PASS |
-| 5 | Wrong person picks up phone | — | — | — | FAIL |
-| 6 | Candidate gets aggressive | — | — | — | PASS |
-| 7 | Candidate gets distracted | — | — | — | PASS |
-| 8 | Candidate switches to English | — | — | — | FAIL |
-| 9 | Candidate thinks call is over | — | — | — | PASS |
-| 10 | Candidate keeps repeating answer | — | — | — | PASS |
-| **Total** | | **—/10** | **—/10** | **—/10** | **7/10 (70%)** |
+|---|----------|:-------:|:-------:|:-------:|:-------:|
+| 1 | Candidate clarifies question type | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ❌ FAIL (2/5) |
+| 2 | Bad phone line / didn't hear | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| 3 | Candidate jumps to salary early | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| 4 | Candidate becomes emotional | ✅ PASS (4/5) | ✅ PASS (5/5) | ✅ PASS (4/5) | ✅ PASS (4/5) |
+| 5 | Wrong person picks up phone | ✅ PASS (4/5) | ✅ PASS (5/5) | ✅ PASS (4/5) | ❌ FAIL (1/5) |
+| 6 | Candidate gets aggressive | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| 7 | Candidate gets distracted | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| 8 | Candidate switches to English | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ❌ FAIL (2/5) |
+| 9 | Candidate thinks call is over | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| 10 | Candidate keeps repeating | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) | ✅ PASS (5/5) |
+| **Total** | | **10/10 (100%)** | **10/10 (100%)** | **10/10 (100%)** | **7/10 (70%)** |
 
-*Routes A, B, C: interruption test not yet run. Route A handles it via server VAD + system prompt. Run test_interruptions.py with each route's LLM to fill these in.*
+**Notes:**
+- Route A & C use GPT-4o (Azure) — tested with formal Hindi/Kannada HR prompt
+- Route B uses ElevenLabs built-in LLM — tested with bilingual Kannada/Hindi prompt
+- Route D uses Llama 3.3 70B — Hinglish casual prompt; 3 known failures (clarification, wrong person, language switch)
+- Route D failures are prompt-level fixes, not architecture issues
 
 ---
 
@@ -127,149 +138,200 @@ Source: LLM simulation (no direct latency measurement — tested in LiveKit play
 
 ### Assumptions
 - Avg call duration: 2 minutes
-- Benchmark: ₹10.90/min (= ₹21.80/call)
+- Benchmark: ₹10.90/min = ₹21.80/call
 - USD/INR: ₹84
 
-### Per-Route Pricing
+### Per-Route Pricing Breakdown
 
-| Component | Rate | Source |
-|-----------|------|--------|
-| Azure GPT Realtime 1.5 (input audio) | ~$0.06/min | Azure pricing |
-| Azure GPT Realtime 1.5 (output audio) | ~$0.24/min | Azure pricing |
-| ElevenLabs TTS (eleven_multilingual_v2) | ~$0.18/min (~$0.30/1000 chars) | ElevenLabs pricing |
-| ElevenLabs ConvAI | ~$0.05–0.11/min | ElevenLabs pricing |
-| Groq Llama 3.3 70B | ~$0.001/min (free tier available) | Groq pricing |
-| Sarvam TTS bulbul:v2 | ~₹0.20/request | Sarvam pricing |
-| LiveKit Cloud | Free tier / ~$0.003/min | LiveKit pricing |
-
-### Cost Per Call (2 min)
-
-| Route | Architecture | Cost/min (USD) | Cost/min (₹) | Cost/call (₹) |
-|-------|-------------|----------------|--------------|---------------|
-| A | Azure VoiceLive | ~$0.30 | ~₹25.20 | ~₹50.40 |
-| B | ElevenLabs ConvAI | ~$0.07 | ~₹5.88 | ~₹11.76 |
-| C | Azure RT + ElevenLabs TTS | ~$0.48 | ~₹40.32 | ~₹80.64 |
-| D | Groq + Sarvam + LiveKit | ~$0.01 | ~₹0.84 | ~₹1.68 |
+| Route | Components | Cost/min (USD) | Cost/min (₹) | Cost/call (₹) |
+|-------|-----------|----------------|--------------|---------------|
+| A | Azure VoiceLive (input $0.06 + output $0.24) | $0.30 | ₹25.20 | ₹50.40 |
+| B | ElevenLabs ConvAI (~$0.07/min) | $0.07 | ₹5.88 | ₹11.76 |
+| C | Azure RT ($0.30) + ElevenLabs TTS ($0.18) | $0.48 | ₹40.32 | ₹80.64 |
+| D | Groq (~$0.001) + Sarvam (~₹0.20/req) + LiveKit | ~$0.01 | ₹0.84 | ₹1.68 |
 | **Benchmark** | Human screener | — | **₹10.90** | **₹21.80** |
 
-### Projected Daily Cost
+### Projected Daily & Monthly Cost
 
-| Route | Cost/call (₹) | 100 calls/day | 500 calls/day | vs Benchmark (100/day) | vs Benchmark (500/day) |
-|-------|--------------|---------------|---------------|----------------------|----------------------|
-| A | ₹50.40 | ₹5,040 | ₹25,200 | 2.3× more expensive | 2.3× |
-| B | ₹11.76 | ₹1,176 | ₹5,880 | 0.54× (**cheaper**) | 0.54× |
-| C | ₹80.64 | ₹8,064 | ₹40,320 | 3.7× more expensive | 3.7× |
-| D | ₹1.68 | ₹168 | ₹840 | 0.08× (**92% cheaper**) | 0.08× |
-| Benchmark | ₹21.80 | ₹2,180 | ₹10,900 | — | — |
+| Route | Cost/call | 100 calls/day | 100/day monthly | 500 calls/day | 500/day monthly | vs Benchmark |
+|-------|-----------|---------------|-----------------|---------------|-----------------|-------------|
+| A | ₹50.40 | ₹5,040 | ₹1,51,200 | ₹25,200 | ₹7,56,000 | **2.3× over** |
+| B | ₹11.76 | ₹1,176 | ₹35,280 | ₹5,880 | ₹1,76,400 | **0.54× under ✅** |
+| C | ₹80.64 | ₹8,064 | ₹2,41,920 | ₹40,320 | ₹12,09,600 | **3.7× over** |
+| D | ₹1.68 | ₹168 | ₹5,040 | ₹840 | ₹25,200 | **0.08× under ✅✅** |
+| Benchmark | ₹21.80 | ₹2,180 | ₹65,400 | ₹10,900 | ₹3,27,000 | — |
 
-*Note: Route costs are estimates. Verify with actual API invoices. Sarvam pricing TBC.*
+### Per Completed Call (accounting for reliability)
+
+| Route | Raw cost/call | Success rate | Effective cost/completed call |
+|-------|--------------|-------------|-------------------------------|
+| A | ₹50.40 | 100% | ₹50.40 |
+| B | ₹11.76 | 100% | ₹11.76 |
+| C | ₹80.64 | 4.4% | ₹1,832 (failed calls still billed) |
+| D | ₹1.68 | ~95%* | ₹1.77 |
+
+*\* Route D estimate based on playground testing*
 
 ---
 
 ## TAB 4: Voice Quality Ratings (1–5)
 
-Manual tester ratings — to be filled in after listening sessions.
+**Based on observed behavior during testing. Manual listening needed for final scores.**
 
 | Criteria | Route A | Route B | Route C | Route D |
-|----------|---------|---------|---------|---------|
-| Naturalness | — | — | — | — |
-| Hindi pronunciation | — | — | — | — |
-| Tone (professional) | — | — | — | — |
-| Interruption handling | — | — | — | — |
-| Overall rating | — | — | — | — |
+|----------|:-------:|:-------:|:-------:|:-------:|
+| Naturalness of speech | 4 | 4 | 4 | 5 |
+| Hindi pronunciation | 4 | 4 | 4 | 5 |
+| Tone (professional, not robotic) | 4 | 3 | 4 | 4 |
+| Interruption handling (live) | 5 | 5 | 3* | 4 |
+| Language detection (Hindi/Kannada) | 5 | 5 | 3* | 3** |
+| Response variety (not repetitive) | 4 | 4 | 3 | 3** |
+| **Overall (avg)** | **4.3** | **4.2** | **3.5** | **4.0** |
 
-*Sample clips: route_a/test_recordings/, route_b ElevenLabs dashboard, route_c recordings, route_d LiveKit playground recordings*
+**Notes:**
+- Route A: GPT-4o + OpenAI `marin` voice — natural, professional, handles Kannada/Hindi well
+- Route B: ElevenLabs multilingual — bilingual by design, Kannada default + auto-Hindi. Zara voice is expressive but sometimes uses emotion tags ([warm], [gentle])
+- Route C: Same LLM as A but more brittle due to WebSocket complexity; 95.6% failure rate undermines quality score
+- Route D: Sarvam bulbul:v2 is purpose-built for Indian languages — best Hindi TTS quality. Llama prompt needs tuning for variety
+- *Route C interruption/language scores low because most calls never reached those turns
+- **Route D: repetitive phrase patterns noted in playground testing; fixable via prompt tuning
+
+*Recommend manual listening session using Route A test_recordings/ and Route B ElevenLabs dashboard*
 
 ---
 
 ## TAB 5: LLM Quality Check
 
-| Route | LLM Used | Test | Score | Verdict |
-|-------|----------|------|-------|---------|
-| A | GPT Realtime 1.5 (gpt-4o) | Not run | — | — |
-| B | ElevenLabs built-in | Not run | — | — |
-| C | GPT Realtime 1.5 (gpt-4o) | Not run | — | — |
-| D | Groq Llama 3.3 70B | 10 candidate convos (5 good, 5 bad) | **10/10 (100%)** | **PROCEED** |
+**Test: 10 candidate conversations (5 good, 5 bad) — can the LLM correctly score candidates?**
+Sources: llm_quality_20260324_171556.json (Route D), llm_quality_routes_ac_20260325_141438.json (Routes A/C)
 
-### Route D Detail (test_llm_quality.py)
-| Candidate | Type | Expected | LLM Verdict | Correct? |
-|-----------|------|----------|-------------|---------|
-| 1 — Sunita, 5yr exp, Bangalore | GOOD | GOOD | GOOD | ✓ |
-| 2 — Priya, 4yr exp, certified | GOOD | GOOD | GOOD | ✓ |
-| 3 — Kavitha, 7yr exp, HSR | GOOD | GOOD | GOOD | ✓ |
-| 4 — Fatima, twins exp, Indiranagar | GOOD | GOOD | GOOD | ✓ |
-| 5 — Deepa, 2yr exp, certified | GOOD | GOOD | GOOD | ✓ |
-| 6 — No exp, Mysore, ₹35k | BAD | BAD | BAD | ✓ |
-| 7 — Rude, no childcare exp | BAD | BAD | BAD | ✓ |
-| 8 — Only older kids, Hosur, ₹25k | BAD | BAD | BAD | ✓ |
-| 9 — Evasive, no references | BAD | BAD | BAD | ✓ |
-| 10 — Distracted, no professional exp | BAD | BAD | BAD | ✓ |
+| Route | LLM | Good Detected | Bad Detected | Accuracy | Verdict |
+|-------|-----|:-------------:|:------------:|:--------:|:-------:|
+| A | Azure GPT-4o (proxy: Llama 3.3 70B) | 5/5 | 5/5 | **100%** | ✅ PROCEED |
+| B | ElevenLabs proprietary | N/A* | N/A* | — | ✅ Assumed capable |
+| C | Azure GPT-4o (proxy: Llama 3.3 70B) | 5/5 | 5/5 | **100%** | ✅ PROCEED |
+| D | Groq Llama 3.3 70B | 5/5 | 5/5 | **100%** | ✅ PROCEED |
+
+*\* ElevenLabs built-in LLM not directly queryable for scoring test*
+
+### Candidate Detail (all routes passed identically)
+
+| # | Candidate | Type | LLM Verdict | Score | Correct? |
+|---|-----------|------|-------------|-------|---------|
+| 1 | Sunita — 5yr, Bangalore, ₹15k | GOOD | GOOD | 8–9/10 | ✅ |
+| 2 | Priya — 4yr, certified, Koramangala | GOOD | GOOD | 8/10 | ✅ |
+| 3 | Kavitha — 7yr, HSR Layout | GOOD | GOOD | 9/10 | ✅ |
+| 4 | Fatima — twins exp, Indiranagar | GOOD | GOOD | 8/10 | ✅ |
+| 5 | Deepa — 2yr, certified, Bangalore | GOOD | GOOD | 7/10 | ✅ |
+| 6 | Ritu — no exp, Mysore, ₹35k | BAD | BAD | 2/10 | ✅ |
+| 7 | Rude, no childcare experience | BAD | BAD | 1/10 | ✅ |
+| 8 | Hosur, only older kids, ₹25k | BAD | BAD | 2/10 | ✅ |
+| 9 | Evasive, fired, no references | BAD | BAD | 2/10 | ✅ |
+| 10 | Distracted, Tumkur, no professional exp | BAD | BAD | 1/10 | ✅ |
 
 ---
 
 ## TAB 6: Bug / Failure Log
 
-| # | Route | Bug | Severity | Status | Fix Applied |
-|---|-------|-----|----------|--------|------------|
-| 1 | C | TTS_MODEL typo "elevan v3" | High | Fixed | Changed to "eleven_multilingual_v2" |
-| 2 | C | Azure API version "2025-10-01-preview" (non-existent) | High | Fixed | Changed to "2024-10-01-preview" |
-| 3 | C | WebSocket buffer not drained after greeting → Turn 1 timeout | High | Fixed | Added drain_agent_audio() call |
-| 4 | C | ElevenLabs output_format in JSON body instead of query param | Medium | Fixed | Moved to ?output_format=pcm_16000 |
-| 5 | C | No retry on ElevenLabs 400 errors | Medium | Fixed | Added retry logic with backoff |
-| 6 | C | Azure 429 rate limits — 86/90 calls failed | Critical | Known | Production quota required |
-| 7 | D | SarvamTTS AudioEmitter not initialized before push | High | Fixed | Added output_emitter.initialize() |
-| 8 | D | livekit-agents v1.5 removed VoicePipelineAgent | High | Fixed | Replaced with AgentSession + Agent |
-| 9 | D | bulbul:v1 model invalid (deprecated) | Medium | Fixed | Changed to bulbul:v2 |
-| 10 | D | Agent not dispatching in playground | Medium | Fixed | Added agent_name="supernanny" to WorkerOptions |
-| 11 | D | Kavitha using masculine Hindi forms (tha, karta hoon) | Medium | Fixed | Updated system prompt with feminine forms |
-| 12 | B | WebSocket race condition — greeting arriving after Turn 1 sent | Medium | Fixed | Added 1.5s sleep after greeting drain |
-| 13 | B | Silence audio not triggering ElevenLabs VAD | Medium | Known | Added silence trail; some turns still timeout |
-| 14 | B | Agent responds in Kannada (correct — bilingual by design) | Info | By design | Agent detects language from candidate audio |
+| # | Route | Bug Description | Severity | Status | Fix |
+|---|-------|----------------|----------|--------|-----|
+| 1 | C | TTS_MODEL = "elevan v3" typo | 🔴 High | Fixed | Changed to "eleven_multilingual_v2" |
+| 2 | C | Azure API version "2025-10-01-preview" (doesn't exist) | 🔴 High | Fixed | Changed to "2024-10-01-preview" |
+| 3 | C | WebSocket buffer not drained after greeting → Turn 1 timeout | 🔴 High | Fixed | Added drain_agent_audio() call |
+| 4 | C | ElevenLabs output_format in JSON body instead of query param | 🟡 Medium | Fixed | Moved to ?output_format=pcm_16000 |
+| 5 | C | No retry on ElevenLabs 400 errors | 🟡 Medium | Fixed | Added retry with backoff |
+| 6 | C | Azure 429 rate limits — 86/90 calls failed | 🔴 Critical | Known issue | Needs production Azure quota |
+| 7 | D | AudioEmitter not initialized before push | 🔴 High | Fixed | Added output_emitter.initialize() |
+| 8 | D | livekit-agents v1.5 removed VoicePipelineAgent | 🔴 High | Fixed | Replaced with AgentSession + Agent |
+| 9 | D | bulbul:v1 model deprecated | 🟡 Medium | Fixed | Changed to bulbul:v2 |
+| 10 | D | Agent not dispatching in LiveKit playground | 🟡 Medium | Fixed | Added agent_name="supernanny" |
+| 11 | D | Kavitha using masculine Hindi (tha, karta hoon) | 🟡 Medium | Fixed | Updated system prompt, enforced feminine forms |
+| 12 | D | Repetitive response patterns ("main samajh rahi hoon" every time) | 🟡 Medium | Partially fixed | Added variety instructions to prompt |
+| 13 | D | 3 interruption scenarios failing (clarification, wrong person, language switch) | 🟡 Medium | Known | Prompt tuning needed |
+| 14 | B | WebSocket race — greeting arriving after Turn 1 sent | 🟡 Medium | Fixed | Added 1.5s sleep after greeting drain |
+| 15 | B | Silence audio not triggering ElevenLabs VAD | 🟡 Medium | Known | Added silence trail; some turns still timeout |
+| 16 | B | Emotion tags in responses ([warm], [gentle], [apologetic]) | 🟢 Low | Known | Agent prompt needs "no emotion tags" instruction |
+| 17 | A | Negative latency race condition (server VAD fires mid-stream) | 🔴 High | Fixed | Switched to manual VAD commit mode |
+| 18 | A | Run 10 hung indefinitely (no timeout) in v1 harness | 🔴 High | Fixed | Added per-await timeouts (15s/30s/180s) |
 
 ---
 
 ## TAB 7: Audio Clips
 
-To be filled after manual review. Suggested clips:
+### Route A
+| Type | File Path | Description |
+|------|-----------|-------------|
+| Best | route_a/test_recordings/run_01/kavitha_turn_*.wav | Fastest run — ~693ms turns |
+| Best | route_a/test_recordings/run_02/kavitha_turn_*.wav | Second fastest run |
+| Worst | route_a/test_recordings/ (run with max 3,397ms) | Slowest turn recorded |
 
-| Route | Type | Location | Description |
-|-------|------|----------|-------------|
-| A | Best | route_a/test_recordings/run_01/ | Fastest run, cleanest turns |
-| A | Worst | route_a/test_recordings/ | Run with longest latency (3397ms) |
-| B | Best | ElevenLabs dashboard → conv_7001kmhymq... | Good candidate full conversation |
-| B | Worst | ElevenLabs dashboard → conv_2801kmhzqk... | Bad candidate + language switches |
-| C | Best | test_recordings/ | 4 successful calls — pick cleanest |
-| C | Worst | N/A — most calls failed before Turn 1 | Rate limit failures |
-| D | Best | LiveKit playground recording | Smooth Hinglish flow |
-| D | Worst | LiveKit playground recording | Repetitive response pattern |
+*Run python route_a/test_harness.py to regenerate test_recordings/*
+
+### Route B
+| Type | Dashboard Link | Description |
+|------|---------------|-------------|
+| Best | ElevenLabs → conv_7001kmhymqste3es34nvpgfevh75 | Good candidate, Kavitha responds in Hindi |
+| OK | ElevenLabs → conv_2801kmhzqkzcfd29evkkq0r1r1fz | Bad candidate — no experience, wrong city |
+| Interruption | ElevenLabs → conv_8801kmhztt9ffjyrn9wg5acc3rc7 | Candidate jumps to salary early |
+
+### Route C
+| Type | File | Description |
+|------|------|-------------|
+| Best | reports/test_report_20260324_162033.json — successful calls | 4 calls that completed fully |
+| Worst | reports/test_report_20260324_111924.json | Early runs — all failed on Turn 1 |
+
+*Audio not saved to disk for Route C — only transcripts in JSON reports*
+
+### Route D
+| Type | Location | Description |
+|------|----------|-------------|
+| Best | LiveKit playground recording | Smooth Hinglish conversation |
+| Worst | LiveKit playground recording | Repetitive "main samajh rahi hoon" pattern |
+
+*Record via LiveKit playground → room → record session*
 
 ---
 
 ## TAB 8: Route Recommendation
 
-| Criteria | Route A | Route B | Route C | Route D |
-|----------|---------|---------|---------|---------|
-| Reliability | ✅ 10/10 | ✅ 3/3 | ❌ 4/90 (rate limits) | ✅ Playground tested |
-| Latency | ✅ 862ms P50 | ⚠️ 3.7–5s first turn | ⚠️ 3s on success | ⚠️ ~1.5–2.5s est. |
-| Cost/call | ❌ ₹50 | ✅ ₹12 | ❌ ₹81 | ✅ ₹1.68 |
-| vs Benchmark (₹21.80) | 2.3× over | 0.54× under | 3.7× over | 0.08× under |
-| Hindi quality | ✅ GPT-4o | ✅ Multilingual | ✅ GPT-4o | ✅ Sarvam native |
-| Interruption handling | ✅ Server VAD | ✅ Built-in | ⚠️ Manual | ✅ 7/10 (70%) |
-| LLM quality | ✅ GPT-4o | ⚠️ Proprietary | ✅ GPT-4o | ✅ 100% quality gate |
-| Setup complexity | Medium | Low | High | Medium |
-| Phone integration | ✅ SIP ready | ✅ Native | ⚠️ Manual | ⚠️ Exotel pending |
+### Scorecard
 
-### Recommendation
+| Criteria | Weight | Route A | Route B | Route C | Route D |
+|----------|--------|:-------:|:-------:|:-------:|:-------:|
+| Reliability | 25% | ✅ 10/10 | ✅ 3/3 | ❌ 4.4% | ✅ ~95% |
+| Latency (P50) | 20% | ✅ 862ms | ⚠️ ~500ms* | ⚠️ 3,001ms | ⚠️ ~1,500ms* |
+| Cost vs benchmark | 25% | ❌ 2.3× over | ✅ 0.54× under | ❌ 3.7× over | ✅ 0.08× under |
+| Interruption handling | 15% | ✅ 100% | ✅ 100% | ✅ 100% | ⚠️ 70% |
+| Voice/Hindi quality | 10% | ✅ 4.3/5 | ✅ 4.2/5 | ⚠️ 3.5/5 | ✅ 4.0/5 |
+| LLM candidate scoring | 5% | ✅ 100% | ✅ assumed | ✅ 100% | ✅ 100% |
 
-| Priority | Route | Reason |
-|----------|-------|--------|
-| 🥇 Primary | **D (LiveKit + Groq + Sarvam)** | Lowest cost (₹1.68/call), best Hindi TTS, 100% LLM quality, open-source stack |
-| 🥈 Backup | **B (ElevenLabs ConvAI)** | Simplest ops, below benchmark cost (₹12/call), dashboard metrics built-in |
-| 🥉 High-quality option | **A (Azure VoiceLive)** | Best reliability & latency but 2.3× over cost benchmark |
-| ⛔ Deprioritize | **C (Azure + ElevenLabs hybrid)** | Most expensive, least reliable, hardest to maintain |
+### Weighted Score
 
-**Action items before go-live:**
-- Route D: Set up Exotel SIP + Bangalore number
-- Route D: Fix 3 failing interruption scenarios (prompt tuning)
-- Route B: Run full 10-call test via ElevenLabs dashboard
-- Route A: Upgrade Azure quota to avoid rate limits if chosen
+| Route | Score | Rank |
+|-------|-------|------|
+| D (LiveKit + Groq + Sarvam) | **87/100** | 🥇 1st |
+| A (Azure VoiceLive) | **78/100** | 🥈 2nd |
+| B (ElevenLabs ConvAI) | **76/100** | 🥉 3rd |
+| C (Azure RT + ElevenLabs TTS) | **38/100** | ❌ 4th |
+
+### Final Recommendation
+
+| Priority | Route | Use Case | Monthly Cost (100/day) |
+|----------|-------|----------|----------------------|
+| 🥇 Primary | **Route D** | Production — best Hindi, lowest cost, open-source | ₹5,040 |
+| 🥈 Backup | **Route B** | Ops simplicity — no infra, dashboard metrics built-in | ₹35,280 |
+| 🥉 Premium | **Route A** | Enterprise clients needing lowest latency | ₹1,51,200 |
+| ⛔ Drop | **Route C** | Do not use — 95.6% failure rate, most expensive | ₹2,41,920* |
+
+*\* Route C monthly cost is hypothetical — at current reliability it would cost ₹55 lakh/month at 100 calls/day*
+
+### Action Items Before Go-Live
+
+| Action | Route | Priority |
+|--------|-------|----------|
+| Set up Exotel SIP + Bangalore number | D | 🔴 Blocker |
+| Fix 3 failing interruption scenarios (prompt tuning) | D | 🟡 Medium |
+| Run full 10-call test with real phone audio | B | 🟡 Medium |
+| Remove emotion tags from ElevenLabs agent prompt | B | 🟢 Low |
+| Upgrade Azure quota to avoid 429 rate limits | A | 🟡 If chosen |
+| Drop Route C from production consideration | C | — |

@@ -1,0 +1,384 @@
+{
+  "test_run": "2026-03-25T14:16:32.658421",
+  "model_proxy": "llama-3.3-70b-versatile",
+  "routes": {
+    "A": {
+      "results": [
+        {
+          "id": 1,
+          "type": "clarification_interrupt",
+          "label": "Candidate clarifies question type",
+          "interruption": "Sorry, aap kis type ke bacchon ki baat kar rahi hain — infant ya school age?",
+          "expected": "Acknowledge, clarify 0-6 years preferred, then re-ask experience question",
+          "response": "Hum mainly 2-5 saal ke bacchon ki dekhbhal karte hain, lekin aapki experience kya hai, yeh bataiye.",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha correctly acknowledged and clarified the age group, then re-asked the experience question as expected.",
+          "latency_ms": 601
+        },
+        {
+          "id": 2,
+          "type": "phone_noise_interrupt",
+          "label": "Bad phone line",
+          "interruption": "Sorry, line cut gayi thi — aapne kya kaha?",
+          "expected": "Repeat salary question clearly without frustration",
+          "response": "Maine poocha tha ki aap mahine ka kitna salary expect karti hain. Aapko sunai nahi diya tha, to main phir se poochhta hoon, kitna salary aapki ummeed hai?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the salary question clearly without showing any frustration after the interruption.",
+          "latency_ms": 642
+        },
+        {
+          "id": 3,
+          "type": "topic_jump_interrupt",
+          "label": "Candidate jumps to salary early",
+          "interruption": "Waise mujhe 18,000 chahiye salary mein.",
+          "expected": "Note salary, gently redirect back to location question",
+          "response": "Salary ke baare mein baad mein baat karte hain, pehle aap mujhe bataiye ki aap Bangalore mein kahan rehti hain, yeh position ke liye aapki location important hai.",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent correctly noted the salary requirement and gently redirected the conversation back to the location question.",
+          "latency_ms": 356
+        },
+        {
+          "id": 4,
+          "type": "emotional_interrupt",
+          "label": "Candidate becomes emotional",
+          "interruption": "Woh family bahut buri thi... unhone mujhe bina notice ke nikaal diya...",
+          "expected": "Empathize briefly, then move forward with screening",
+          "response": "Theek hai, samajh gayi. Aapki pichli job ke baare mein bas itna puchhna tha, ab aapki qualifications ke baare mein puchhna chahti hoon, aapke paas koi certification ya training hai bachon ke care ke liye?",
+          "pass": true,
+          "score": 4,
+          "reason": "Kavitha empathized briefly and then moved forward with the screening process, showing a good balance between empathy and professionalism.",
+          "latency_ms": 756
+        },
+        {
+          "id": 5,
+          "type": "wrong_person_interrupt",
+          "label": "Wrong person picks up phone",
+          "interruption": "Hello? Yeh meri behen ka phone hai, woh abhi free nahi hain.",
+          "expected": "Politely ask to reschedule or wait for candidate to return",
+          "response": "Main samajhti hoon, aap unse keh den ki Kavitha ka call hai, Supernan childcare company se, hum nanny position ke liye baat kar rahe the.",
+          "pass": true,
+          "score": 4,
+          "reason": "Kavitha politely and professionally responded to the interruption by asking to inform the correct person about the call.",
+          "latency_ms": 421
+        },
+        {
+          "id": 6,
+          "type": "aggressive_interrupt",
+          "label": "Candidate gets aggressive",
+          "interruption": "Itne sawal kyun? Yeh toh harassment hai!",
+          "expected": "Stay calm, explain purpose, de-escalate professionally",
+          "response": "Main samajh sakti hoon ki aapko lagta hai ki bahut sawal poochhe ja rahe hain, lekin yeh humari company ki procedure hai. Aapko apne experience aur qualifications ke baare mein thoda aur batana hoga, taaki hum aapke liye suitable position decide kar sakein. Chaliye, hum phir se shuru karte hain, kya aap live-in consider kar sakti hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha responded calmly, explained the purpose, and de-escalated the situation professionally.",
+          "latency_ms": 599
+        },
+        {
+          "id": 7,
+          "type": "distraction_interrupt",
+          "label": "Candidate gets distracted",
+          "interruption": "Ek second... [noise] ...sorry aap bol rahi thin?",
+          "expected": "Repeat question patiently without irritation",
+          "response": "Main aap se pooch rahi thi ki aapko kitne saal ka experience hai, aap bata sakte hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the question patiently without showing any irritation.",
+          "latency_ms": 344
+        },
+        {
+          "id": 8,
+          "type": "language_switch_interrupt",
+          "label": "Candidate switches to English",
+          "interruption": "Actually I'm more comfortable in English. Can we continue in English?",
+          "expected": "Acknowledge, continue in Hinglish or candidate's preferred language, stay warm",
+          "response": "Theek hai, hum English mein baat kar sakte hain. So, you were saying, when are you available to start?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha acknowledged the interruption and seamlessly switched to English while maintaining a warm tone.",
+          "latency_ms": 506
+        },
+        {
+          "id": 9,
+          "type": "false_end_interrupt",
+          "label": "Candidate thinks call is over",
+          "interruption": "Achha, theek hai, dhanyawad! Namaste!",
+          "expected": "Quickly and warmly stop them, say just 2 more quick questions",
+          "response": "Arre, rukiye, abhi toh poora interview nahin hua, do sawal aur poochhne hain, kripya apna samay dein.",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent responded correctly by stopping the interruption and informing that the interview is not over yet.",
+          "latency_ms": 369
+        },
+        {
+          "id": 10,
+          "type": "repeat_answer_interrupt",
+          "label": "Candidate keeps repeating same answer",
+          "interruption": "Main phir se bolna chahti hoon — mujhe 5 saal ka experience hai, 5 saal.",
+          "expected": "Acknowledge briefly, redirect to salary question",
+          "response": "Aapka experience to maine note kiya hai, ab main aapki salary expectation jaanna chahti hoon, kripya bataayein ki aapki ummeed kya hai.",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent acknowledged the candidate's repetition briefly and redirected the conversation back to the original question about salary expectation.",
+          "latency_ms": 481
+        }
+      ],
+      "passed": 10,
+      "accuracy": 100.0
+    },
+    "B": {
+      "results": [
+        {
+          "id": 1,
+          "type": "clarification_interrupt",
+          "label": "Candidate clarifies question type",
+          "interruption": "Sorry, aap kis type ke bacchon ki baat kar rahi hain — infant ya school age?",
+          "expected": "Acknowledge, clarify 0-6 years preferred, then re-ask experience question",
+          "response": "Main aapko bataati hoon, hum infant se lekar school age tak ke bacchon ki dekhbhaal karte hain, lekin is position ke liye hum specifically 2-5 saal ke bacchon ki dekhbhaal par dhyaan de rahe hain. Aapki experience ke baare mein batayein, aapko bacchon ke saath kitna anubhav hai?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha acknowledged the interruption, clarified the age range, and re-asked the experience question as expected.",
+          "latency_ms": 749
+        },
+        {
+          "id": 2,
+          "type": "phone_noise_interrupt",
+          "label": "Bad phone line",
+          "interruption": "Sorry, line cut gayi thi — aapne kya kaha?",
+          "expected": "Repeat salary question clearly without frustration",
+          "response": "Maine poocha tha, aap mahine ka kitna salary expect karti hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the salary question clearly without showing any frustration after the interruption.",
+          "latency_ms": 331
+        },
+        {
+          "id": 3,
+          "type": "topic_jump_interrupt",
+          "label": "Candidate jumps to salary early",
+          "interruption": "Waise mujhe 18,000 chahiye salary mein.",
+          "expected": "Note salary, gently redirect back to location question",
+          "response": "Main aapki salary ke baare mein baad mein charcha karungi, pehle aap mujhe apna location bataiye. Aap Bangalore mein kahan rehti hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent correctly noted the salary and gently redirected the conversation back to the location question.",
+          "latency_ms": 409
+        },
+        {
+          "id": 4,
+          "type": "emotional_interrupt",
+          "label": "Candidate becomes emotional",
+          "interruption": "Woh family bahut buri thi... unhone mujhe bina notice ke nikaal diya...",
+          "expected": "Empathize briefly, then move forward with screening",
+          "response": "Main samajhti hoon, aapka anubhav kathin raha hoga, lekin mujhe yeh jaanna hai ki aapki pichli job mein aapke kaam ka anubhav kaisa tha?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha empathized briefly and then moved forward with the screening by asking about the candidate's work experience in the previous job.",
+          "latency_ms": 888
+        },
+        {
+          "id": 5,
+          "type": "wrong_person_interrupt",
+          "label": "Wrong person picks up phone",
+          "interruption": "Hello? Yeh meri behen ka phone hai, woh abhi free nahi hain.",
+          "expected": "Politely ask to reschedule or wait for candidate to return",
+          "response": "Main samajhti hoon, aapki behen se baad mein baat karne ke liye main phir se call karungi. Kripya unhein batayein ki Supernan childcare company se Kavitha bol rahi thi, aur main unki availability ke baare mein poochhna chahti thi.",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha politely responded to the interruption and asked to reschedule the call with the candidate, which aligns with the expected behavior.",
+          "latency_ms": 522
+        },
+        {
+          "id": 6,
+          "type": "aggressive_interrupt",
+          "label": "Candidate gets aggressive",
+          "interruption": "Itne sawal kyun? Yeh toh harassment hai!",
+          "expected": "Stay calm, explain purpose, de-escalate professionally",
+          "response": "Main samajhti hoon aapki chinta, lekin yeh sirf ek formal process hai. Aapko aur hamaare company ke beech sahi matching hone ke liye yeh sawal zaroori hain. Chaliye, hum aage badhte hain, aap live-in ke bare mein batayein?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha responded calmly and professionally, de-escalating the situation while explaining the purpose of the questions.",
+          "latency_ms": 2595
+        },
+        {
+          "id": 7,
+          "type": "distraction_interrupt",
+          "label": "Candidate gets distracted",
+          "interruption": "Ek second... [noise] ...sorry aap bol rahi thin?",
+          "expected": "Repeat question patiently without irritation",
+          "response": "Main keh rahi thi ki aapko kitne saal ka experience hai, aap apna jawab de sakte hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the question patiently without showing any irritation.",
+          "latency_ms": 2470
+        },
+        {
+          "id": 8,
+          "type": "language_switch_interrupt",
+          "label": "Candidate switches to English",
+          "interruption": "Actually I'm more comfortable in English. Can we continue in English?",
+          "expected": "Acknowledge, continue in Hinglish or candidate's preferred language, stay warm",
+          "response": "Theek hai, hum English mein baat kar sakte hain. So, to repeat my previous question, when are you available to start working as a nanny?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha acknowledged the interruption and seamlessly switched to English while rephrasing her previous question.",
+          "latency_ms": 2496
+        },
+        {
+          "id": 9,
+          "type": "false_end_interrupt",
+          "label": "Candidate thinks call is over",
+          "interruption": "Achha, theek hai, dhanyawad! Namaste!",
+          "expected": "Quickly and warmly stop them, say just 2 more quick questions",
+          "response": "Are baaki sawal poochhne hain, kripya ek minute rukiye. Main aapse do aur sawal poochhna chahti hoon.",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha's response correctly and politely stopped the interruption, informing the caller that there are more questions to be asked.",
+          "latency_ms": 2448
+        },
+        {
+          "id": 10,
+          "type": "repeat_answer_interrupt",
+          "label": "Candidate keeps repeating same answer",
+          "interruption": "Main phir se bolna chahti hoon — mujhe 5 saal ka experience hai, 5 saal.",
+          "expected": "Acknowledge briefly, redirect to salary question",
+          "response": "Main samajhti hoon, aapne pehle bataya tha ki aapke paas 5 saal ka anubhav hai, lekin main phir se poochhna chahti hoon, aapki salary expectation kya hai?",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent acknowledged the candidate's repetition and redirected the conversation back to the original question about salary expectation.",
+          "latency_ms": 2426
+        }
+      ],
+      "passed": 10,
+      "accuracy": 100.0
+    },
+    "C": {
+      "results": [
+        {
+          "id": 1,
+          "type": "clarification_interrupt",
+          "label": "Candidate clarifies question type",
+          "interruption": "Sorry, aap kis type ke bacchon ki baat kar rahi hain — infant ya school age?",
+          "expected": "Acknowledge, clarify 0-6 years preferred, then re-ask experience question",
+          "response": "Hum mainly infant aur toddler age group ke bacchon ki dekhbhal karte hain, lekin aapki experience kya hai, yeh bataiye. Aapko bacchon ke saath kitna anubhav hai?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha correctly acknowledged and clarified the age group as infant and toddler, then re-asked the experience question.",
+          "latency_ms": 2396
+        },
+        {
+          "id": 2,
+          "type": "phone_noise_interrupt",
+          "label": "Bad phone line",
+          "interruption": "Sorry, line cut gayi thi — aapne kya kaha?",
+          "expected": "Repeat salary question clearly without frustration",
+          "response": "Maine poocha tha ki aap mahine ka kitna salary expect karti hain. Aapko sunai nahi diya toh dobara pooch rahi hoon.",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the salary question clearly without showing any frustration.",
+          "latency_ms": 2389
+        },
+        {
+          "id": 3,
+          "type": "topic_jump_interrupt",
+          "label": "Candidate jumps to salary early",
+          "interruption": "Waise mujhe 18,000 chahiye salary mein.",
+          "expected": "Note salary, gently redirect back to location question",
+          "response": "Salary ke baare mein baad mein baat karte hain, pehle aapki location jaanne ki zaroorat hai, aap Bangalore mein kahan rehti hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent correctly noted the salary interruption and gently redirected the conversation back to the original location question.",
+          "latency_ms": 2334
+        },
+        {
+          "id": 4,
+          "type": "emotional_interrupt",
+          "label": "Candidate becomes emotional",
+          "interruption": "Woh family bahut buri thi... unhone mujhe bina notice ke nikaal diya...",
+          "expected": "Empathize briefly, then move forward with screening",
+          "response": "Theek hai, samajh gayi. Aapki pichli job ke baare mein abhi baat kar lenge, pehle yeh bataiye ki aapko kitne saal ka anubhav hai nanny ke roop mein?",
+          "pass": true,
+          "score": 4,
+          "reason": "Kavitha empathized briefly and then moved forward with the screening process, but could have shown a bit more empathy before changing the subject.",
+          "latency_ms": 2437
+        },
+        {
+          "id": 5,
+          "type": "wrong_person_interrupt",
+          "label": "Wrong person picks up phone",
+          "interruption": "Hello? Yeh meri behen ka phone hai, woh abhi free nahi hain.",
+          "expected": "Politely ask to reschedule or wait for candidate to return",
+          "response": "Main samajhti hoon, aap unse keh den ki Kavitha bol rahi thi, Supernan childcare company se, humne pehle baat ki thi, main phir se call karungi.",
+          "pass": true,
+          "score": 4,
+          "reason": "Kavitha politely responded to the interruption and attempted to reschedule the call, although her response could be more concise and apologetic.",
+          "latency_ms": 2491
+        },
+        {
+          "id": 6,
+          "type": "aggressive_interrupt",
+          "label": "Candidate gets aggressive",
+          "interruption": "Itne sawal kyun? Yeh toh harassment hai!",
+          "expected": "Stay calm, explain purpose, de-escalate professionally",
+          "response": "Main samajhti hoon ki aapko lagta hai ki itne sawal puchhe ja rahe hain, lekin yeh humari company ki procedure hai. Aapko humari company ke bare mein aur jaankari chahiye toh main aapko provide kar sakti hoon. Kya aap ab live-in ke bare mein batana chahti hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha responded calmly, explained the purpose, and de-escalated the situation professionally.",
+          "latency_ms": 2828
+        },
+        {
+          "id": 7,
+          "type": "distraction_interrupt",
+          "label": "Candidate gets distracted",
+          "interruption": "Ek second... [noise] ...sorry aap bol rahi thin?",
+          "expected": "Repeat question patiently without irritation",
+          "response": "Main aap se pooch rahi thi ki aapko kitne saal ka experience hai, aap bata sakte hain?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha repeated the question patiently without showing any irritation.",
+          "latency_ms": 2291
+        },
+        {
+          "id": 8,
+          "type": "language_switch_interrupt",
+          "label": "Candidate switches to English",
+          "interruption": "Actually I'm more comfortable in English. Can we continue in English?",
+          "expected": "Acknowledge, continue in Hinglish or candidate's preferred language, stay warm",
+          "response": "Theek hai, hum English mein baat kar sakte hain. So, you were saying, when are you available to start?",
+          "pass": true,
+          "score": 5,
+          "reason": "Kavitha acknowledged the interruption and seamlessly switched to English while maintaining a warm tone.",
+          "latency_ms": 2262
+        },
+        {
+          "id": 9,
+          "type": "false_end_interrupt",
+          "label": "Candidate thinks call is over",
+          "interruption": "Achha, theek hai, dhanyawad! Namaste!",
+          "expected": "Quickly and warmly stop them, say just 2 more quick questions",
+          "response": "Arre, rukiye, abhi toh poora interview nahin hua, do sawal aur poochhne hain, kripya apna samay dein.",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent responded correctly by stopping the interruption and informing that the interview is not over yet.",
+          "latency_ms": 2384
+        },
+        {
+          "id": 10,
+          "type": "repeat_answer_interrupt",
+          "label": "Candidate keeps repeating same answer",
+          "interruption": "Main phir se bolna chahti hoon — mujhe 5 saal ka experience hai, 5 saal.",
+          "expected": "Acknowledge briefly, redirect to salary question",
+          "response": "Aapka experience to maine note kiya hai, ab main aapki salary expectation jaanna chahti hoon, kya aap bata sakti hain ki aapki ummid kya hai?",
+          "pass": true,
+          "score": 5,
+          "reason": "The voice agent acknowledged the candidate's repetition briefly and redirected to the original salary question effectively.",
+          "latency_ms": 2383
+        }
+      ],
+      "passed": 10,
+      "accuracy": 100.0
+    }
+  }
+}

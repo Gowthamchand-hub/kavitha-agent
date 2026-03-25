@@ -1,0 +1,113 @@
+{
+  "test_run": "2026-03-25T14:14:38.401202",
+  "route": "A_C_proxy",
+  "model": "llama-3.3-70b-versatile",
+  "total": 10,
+  "correct": 10,
+  "accuracy_pct": 100.0,
+  "good_correct": 5,
+  "bad_correct": 5,
+  "verdict": "PROCEED",
+  "results": [
+    {
+      "candidate_id": 1,
+      "label": "Experienced, Bangalore, reasonable salary",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "The candidate meets all the criteria with 5 years of experience, location in Bangalore, availability for full-time, and a reasonable salary expectation.",
+      "correct": true,
+      "latency_ms": 556
+    },
+    {
+      "candidate_id": 2,
+      "label": "Certified, infant experience",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "Candidate meets all criteria with 4 years of experience, location in Bangalore, availability for daytime hours, and reasonable salary expectation.",
+      "correct": true,
+      "latency_ms": 318
+    },
+    {
+      "candidate_id": 3,
+      "label": "7 years, very professional",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "Candidate meets all criteria with 7 years of experience, is located in Bangalore, has suitable availability, and has a reasonable salary expectation.",
+      "correct": true,
+      "latency_ms": 621
+    },
+    {
+      "candidate_id": 4,
+      "label": "Twins experience, honest",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "Candidate meets all criteria with relevant experience, suitable location, and reasonable salary expectation.",
+      "correct": true,
+      "latency_ms": 269
+    },
+    {
+      "candidate_id": 5,
+      "label": "Young but certified, Bangalore",
+      "expected": "GOOD",
+      "llm_verdict": "GOOD",
+      "llm_score": 9,
+      "llm_reason": "Candidate meets experience, availability, and salary expectations with a suitable certification.",
+      "correct": true,
+      "latency_ms": 689
+    },
+    {
+      "candidate_id": 6,
+      "label": "No experience, Mysore, ₹35k",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience, is not currently located in or near Bangalore, and has unrealistic salary expectations.",
+      "correct": true,
+      "latency_ms": 369
+    },
+    {
+      "candidate_id": 7,
+      "label": "Rude, no childcare experience",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks relevant experience, has high salary expectations, and shows a negative attitude towards background checks.",
+      "correct": true,
+      "latency_ms": 386
+    },
+    {
+      "candidate_id": 8,
+      "label": "Only older kids, Hosur, ₹25k",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience with young children, is not located in or near Bangalore, and has a high salary expectation.",
+      "correct": true,
+      "latency_ms": 272
+    },
+    {
+      "candidate_id": 9,
+      "label": "Evasive, no references",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks experience, is unclear about availability, and is uncooperative with providing references.",
+      "correct": true,
+      "latency_ms": 256
+    },
+    {
+      "candidate_id": 10,
+      "label": "Distracted, no professional exp",
+      "expected": "BAD",
+      "llm_verdict": "BAD",
+      "llm_score": 2,
+      "llm_reason": "Candidate lacks professional experience with young children and is not based in or near Bangalore.",
+      "correct": true,
+      "latency_ms": 375
+    }
+  ]
+}

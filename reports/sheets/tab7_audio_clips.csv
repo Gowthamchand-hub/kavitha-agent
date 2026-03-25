@@ -1,0 +1,13 @@
+Route,Type,Location,Description
+A,Best,route_a/test_recordings/run_01/kavitha_turn_*.wav,Fastest run — ~693ms turns
+A,Best,route_a/test_recordings/run_02/kavitha_turn_*.wav,Second fastest run
+A,Worst,route_a/test_recordings/ (run with 3397ms turn),Slowest turn recorded
+B,Best,ElevenLabs dashboard → conv_7001kmhymqste3es34nvpgfevh75,Good candidate — Kavitha responds in Hindi
+B,OK,ElevenLabs dashboard → conv_2801kmhzqkzcfd29evkkq0r1r1fz,Bad candidate — no experience wrong city
+B,Interruption,ElevenLabs dashboard → conv_8801kmhztt9ffjyrn9wg5acc3rc7,Candidate jumps to salary early
+C,Best,reports/test_report_20260324_162033.json — successful calls,4 calls that completed fully
+C,Worst,reports/test_report_20260324_111924.json,Early runs — all failed on Turn 1
+C,Note,Audio not saved — only transcripts in JSON reports,—
+D,Best,LiveKit playground recording,Smooth Hinglish conversation
+D,Worst,LiveKit playground recording,Repetitive main samajh rahi hoon pattern
+D,Note,Record via LiveKit playground → room → record session,—

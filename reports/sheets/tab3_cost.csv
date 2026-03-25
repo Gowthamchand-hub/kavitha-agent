@@ -1,0 +1,27 @@
+ASSUMPTIONS,,
+Avg call duration,2 minutes,
+Benchmark,₹10.90/min = ₹21.80/call,
+USD to INR,₹84,
+,,
+PER-ROUTE PRICING,,
+Route,Architecture,Cost/min (USD),Cost/min (₹),Cost/call (₹)
+A,Azure VoiceLive (input $0.06 + output $0.24),$0.30,₹25.20,₹50.40
+B,ElevenLabs ConvAI (~$0.07/min),$0.07,₹5.88,₹11.76
+C,Azure RT ($0.30) + ElevenLabs TTS ($0.18),$0.48,₹40.32,₹80.64
+D,Groq + Sarvam + LiveKit (~$0.01/min),$0.01,₹0.84,₹1.68
+Benchmark,Human screener,—,₹10.90,₹21.80
+,,
+PROJECTED DAILY COST,,
+Route,Cost/call (₹),100 calls/day (₹),100/day monthly (₹),500 calls/day (₹),500/day monthly (₹),vs Benchmark
+A,₹50.40,₹5040,₹1,51,200,₹25200,₹7,56,000,2.3× over ❌
+B,₹11.76,₹1176,₹35,280,₹5880,₹1,76,400,0.54× under ✅
+C,₹80.64,₹8064,₹2,41,920,₹40320,₹12,09,600,3.7× over ❌
+D,₹1.68,₹168,₹5,040,₹840,₹25,200,0.08× under ✅✅
+Benchmark,₹21.80,₹2180,₹65,400,₹10900,₹3,27,000,—
+,,
+PER COMPLETED CALL (accounting for reliability),,
+Route,Raw cost/call,Success rate,Effective cost/completed call
+A,₹50.40,100%,₹50.40
+B,₹11.76,100%,₹11.76
+C,₹80.64,4.4%,₹1832 (failed calls still billed)
+D,₹1.68,~95%,₹1.77

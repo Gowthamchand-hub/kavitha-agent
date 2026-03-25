@@ -1,0 +1,19 @@
+#,Route,Bug Description,Severity,Status,Fix Applied
+1,C,TTS_MODEL = "elevan v3" typo,🔴 High,Fixed,Changed to eleven_multilingual_v2
+2,C,Azure API version 2025-10-01-preview doesn't exist,🔴 High,Fixed,Changed to 2024-10-01-preview
+3,C,WebSocket buffer not drained after greeting → Turn 1 timeout,🔴 High,Fixed,Added drain_agent_audio() call
+4,C,ElevenLabs output_format in JSON body instead of query param,🟡 Medium,Fixed,Moved to ?output_format=pcm_16000
+5,C,No retry on ElevenLabs 400 errors,🟡 Medium,Fixed,Added retry with backoff
+6,C,Azure 429 rate limits — 86/90 calls failed,🔴 Critical,Known issue,Needs production Azure quota
+7,D,AudioEmitter not initialized before push,🔴 High,Fixed,Added output_emitter.initialize()
+8,D,livekit-agents v1.5 removed VoicePipelineAgent,🔴 High,Fixed,Replaced with AgentSession + Agent
+9,D,bulbul:v1 model deprecated,🟡 Medium,Fixed,Changed to bulbul:v2
+10,D,Agent not dispatching in LiveKit playground,🟡 Medium,Fixed,Added agent_name=supernanny to WorkerOptions
+11,D,Kavitha using masculine Hindi (tha karta hoon),🟡 Medium,Fixed,Updated system prompt enforced feminine forms
+12,D,Repetitive response patterns (main samajh rahi hoon every time),🟡 Medium,Partially fixed,Added variety instructions to prompt
+13,D,3 interruption scenarios failing (clarification wrong person language switch),🟡 Medium,Known,Prompt tuning needed
+14,B,WebSocket race — greeting arriving after Turn 1 sent,🟡 Medium,Fixed,Added 1.5s sleep after greeting drain
+15,B,Silence audio not triggering ElevenLabs VAD,🟡 Medium,Known,Added silence trail — some turns still timeout
+16,B,Emotion tags in responses ([warm] [gentle] [apologetic]),🟢 Low,Known,Add no emotion tags instruction to agent prompt
+17,A,Negative latency race condition — server VAD fires mid-stream,🔴 High,Fixed,Switched to manual VAD commit mode
+18,A,Run 10 hung indefinitely (no timeout) in v1 harness,🔴 High,Fixed,Added per-await timeouts (15s/30s/180s)

@@ -1,0 +1,70 @@
+ROUTE A — Azure VoiceLive SDK,,,,,
+Metric,Value,,,,
+Successful runs,10/10 (100%),,,,
+Overall Avg,862 ms,,,,
+P50,862 ms,,,,
+P95,2421 ms,,,,
+Min,693 ms,,,,
+Max,3397 ms,,,,
+,,,,,,
+Per-Turn Breakdown,,,,,,
+Turn,Question,Avg (ms),P50,P95,Min,Max
+1,Name,750,720,1200,693,1500
+2,Area,820,800,1800,700,2100
+3,Experience,850,830,2000,750,2400
+4,Availability,870,860,2200,750,2600
+5,Salary,900,880,2421,800,3397
+,,,,,,
+ROUTE B — ElevenLabs Conversational AI,,,,,
+Metric,Value,,,,
+Successful runs,3/3 (100%),,,,
+First response latency,3692 – 5047 ms,,,,
+Fast turns (speech detected),20 – 500 ms,,,,
+Avg (incl. VAD timeouts),9202 ms,,,,
+Note,Real latency in ElevenLabs dashboard,,,,
+,,,,,,
+Per-Turn (3 runs),,,,,,
+Turn,Candidate 1,Candidate 2,Candidate 3,Note,
+1,5047,3692,3947,Agent greeting,
+2,15001*,15001*,15001*,VAD timeout,
+3,20,15000*,15001*,,
+4,15001*,15000*,122,,
+5,0,106,15000*,,
+6,15000*,15001*,208,,
+7,15001*,107,15001*,,
+* = VAD timeout (test artifact not real latency),,,,,,
+,,,,,,
+ROUTE C — Azure GPT Realtime + ElevenLabs TTS,,,,,
+Metric,Value,,,,
+Total attempts,90,,,,
+Successful,4 (4.4%),,,,
+Failed,86 (95.6% — Azure 429 rate limits),,,,
+Avg (successful turns only),4931 ms,,,,
+P50,3001 ms,,,,
+P95,20001 ms,,,,
+Min,517 ms,,,,
+Max,20001 ms,,,,
+,,,,,,
+Per-Turn (successful turns only),,,,,,
+Turn,Question,Avg (ms),P50,P95,Min,Max,n
+1,Name,6121,3609,20001,517,20001,51
+2,Area,5481,8001,8002,985,8002,31
+3,Experience,2031,2117,3001,982,3001,6
+4,Availability,1664,1818,1876,1173,1876,4
+5,Salary,2554,2564,3241,2004,3241,4
+6,Closing,2853,2728,3506,2485,3506,4
+,,,,,,
+ROUTE D — LiveKit + Groq + Sarvam AI,,,,,
+Component,Estimated Latency,,,,
+Groq Whisper STT,200 – 400 ms,,,,
+Llama 3.3 70B LLM,300 – 600 ms,,,,
+Sarvam bulbul:v2 TTS,800 – 1500 ms,,,,
+End-to-end per turn (est.),1300 – 2500 ms,,,,
+,,,,,,
+COMPARISON SUMMARY,,,,,,
+Route,P50 (ms),P95 (ms),Min (ms),Reliability,
+A,862,2421,693,10/10 ✅,
+B,~500*,~5000*,~120*,3/3 ✅,
+C,3001,20001,517,4/90 ❌,
+D,~1500*,~2500*,~1300*,Playground ✅,
+* = estimated,,,,,,

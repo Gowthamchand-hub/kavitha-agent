@@ -1,17 +1,8 @@
 Criteria,Route A,Route B,Route C,Route D
-Naturalness of speech,4,4,4,5
+Naturalness,4,4,4,5
 Hindi pronunciation,4,4,4,5
-Tone (professional not robotic),4,3,4,4
-Interruption handling (live),5,5,3,4
-Language detection (Hindi/Kannada),5,5,3,3
-Response variety (not repetitive),4,4,3,3
-Overall (avg),4.3,4.2,3.5,4.0
-,,,,
-Notes,,,,
-Route A,GPT-4o + OpenAI marin voice — natural professional handles Hindi/Kannada well,,
-Route B,ElevenLabs multilingual — bilingual by design. Sometimes uses emotion tags ([warm] [gentle]),,
-Route C,Same LLM as A but 95.6% failure rate undermines overall score,,
-Route D,Sarvam bulbul:v2 best Hindi TTS. Repetitive phrases — fixable via prompt tuning,,
-,,,,
-Rating scale: 1=Poor  2=Below average  3=Average  4=Good  5=Excellent,,,,
-These are observed ratings — update after manual listening session,,,,
+Tone (professional),4,3,4,4
+Interruption handling,5,5,3,4
+Language detection,5,5,3,3
+Response variety,4,4,3,3
+Overall avg,4.3,4.2,3.5,4.0

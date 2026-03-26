@@ -1,19 +1,5 @@
-SUMMARY,,,,
-Route,LLM,Good Detected,Bad Detected,Accuracy,Verdict
-A,Azure GPT-4o (tested via Llama 3.3 70B proxy),5/5,5/5,100%,PROCEED ✅
-B,ElevenLabs proprietary,N/A,N/A,—,Assumed capable
-C,Azure GPT-4o (tested via Llama 3.3 70B proxy),5/5,5/5,100%,PROCEED ✅
-D,Groq Llama 3.3 70B,5/5,5/5,100%,PROCEED ✅
-,,,,
-CANDIDATE DETAIL (all routes passed identically),,,,
-#,Candidate,Type,LLM Verdict,Score,Correct?
-1,Sunita — 5yr exp Bangalore ₹15k,GOOD,GOOD,8/10,✅
-2,Priya — 4yr certified Koramangala,GOOD,GOOD,8/10,✅
-3,Kavitha — 7yr HSR Layout,GOOD,GOOD,9/10,✅
-4,Fatima — twins exp Indiranagar,GOOD,GOOD,8/10,✅
-5,Deepa — 2yr certified Bangalore,GOOD,GOOD,7/10,✅
-6,Ritu — no exp Mysore ₹35k,BAD,BAD,2/10,✅
-7,Rude no childcare experience,BAD,BAD,1/10,✅
-8,Hosur only older kids ₹25k,BAD,BAD,2/10,✅
-9,Evasive fired no references,BAD,BAD,2/10,✅
-10,Distracted Tumkur no professional exp,BAD,BAD,1/10,✅
+Route,LLM,Good (5 candidates),Bad (5 candidates),Accuracy,Verdict
+A,Azure GPT-4o,5/5,5/5,100%,PROCEED
+B,ElevenLabs built-in,N/A,N/A,—,Assumed
+C,Azure GPT-4o,5/5,5/5,100%,PROCEED
+D,Groq Llama 3.3 70B,5/5,5/5,100%,PROCEED

@@ -1,17 +1,12 @@
-#,Scenario,Route A,Route B,Route C,Route D
-1,Candidate clarifies question type,PASS (5/5),PASS (5/5),PASS (5/5),FAIL (2/5)
-2,Bad phone line / didn't hear,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-3,Candidate jumps to salary early,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-4,Candidate becomes emotional,PASS (4/5),PASS (5/5),PASS (4/5),PASS (4/5)
-5,Wrong person picks up phone,PASS (4/5),PASS (5/5),PASS (4/5),FAIL (1/5)
-6,Candidate gets aggressive,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-7,Candidate gets distracted,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-8,Candidate switches to English,PASS (5/5),PASS (5/5),PASS (5/5),FAIL (2/5)
-9,Candidate thinks call is over,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-10,Candidate keeps repeating answer,PASS (5/5),PASS (5/5),PASS (5/5),PASS (5/5)
-,Total,10/10 (100%),10/10 (100%),10/10 (100%),7/10 (70%)
-,,,,,,
-Notes,,,,,,
-Route A & C,GPT-4o (Azure) — tested with formal Hindi/Kannada HR prompt,,,,,
-Route B,ElevenLabs built-in LLM — bilingual Kannada/Hindi prompt,,,,,
-Route D,Llama 3.3 70B — Hinglish prompt — 3 failures are prompt-level fixes,,,,,
+Scenario,Route A,Route B,Route C,Route D
+Candidate clarifies question,PASS,PASS,PASS,FAIL
+Bad phone line,PASS,PASS,PASS,PASS
+Jumps to salary early,PASS,PASS,PASS,PASS
+Candidate gets emotional,PASS,PASS,PASS,PASS
+Wrong person picks up,PASS,PASS,PASS,FAIL
+Candidate gets aggressive,PASS,PASS,PASS,PASS
+Candidate gets distracted,PASS,PASS,PASS,PASS
+Switches to English,PASS,PASS,PASS,FAIL
+Thinks call is over,PASS,PASS,PASS,PASS
+Keeps repeating answer,PASS,PASS,PASS,PASS
+Total,10/10 (100%),10/10 (100%),10/10 (100%),7/10 (70%)

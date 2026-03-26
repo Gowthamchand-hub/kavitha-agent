@@ -1,26 +1,5 @@
-SCORECARD,,,,
-Criteria,Route A,Route B,Route C,Route D
-Reliability,10/10 ✅,3/3 ✅,4.4% ❌,~95% ✅
-Latency P50,862ms ✅,~500ms ✅,3001ms ⚠️,~1500ms ⚠️
-Cost vs benchmark,2.3× over ❌,0.54× under ✅,3.7× over ❌,0.08× under ✅✅
-Interruption handling,100% ✅,100% ✅,100% ✅,70% ⚠️
-Voice/Hindi quality,4.3/5 ✅,4.2/5 ✅,3.5/5 ⚠️,4.0/5 ✅
-LLM candidate scoring,100% ✅,Assumed ✅,100% ✅,100% ✅
-Weighted Score,78/100,76/100,38/100,87/100
-Rank,🥈 2nd,🥉 3rd,❌ 4th,🥇 1st
-,,,,
-FINAL RECOMMENDATION,,,,
-Priority,Route,Use Case,Monthly Cost (100 calls/day),Action needed
-🥇 Primary,D — LiveKit + Groq + Sarvam,Production — best Hindi lowest cost open-source,₹5040,Set up Exotel SIP + fix 3 interruption prompts
-🥈 Backup,B — ElevenLabs ConvAI,Ops simplicity — no infra dashboard metrics built-in,₹35280,Run full 10-call test remove emotion tags
-🥉 Premium,A — Azure VoiceLive,Enterprise clients needing lowest latency,₹151200,Upgrade Azure quota if chosen
-❌ Drop,C — Azure RT + ElevenLabs TTS,Do not use — 95.6% failure rate most expensive,₹241920,Deprioritize
-,,,,
-ACTION ITEMS BEFORE GO-LIVE,,,,
-Action,Route,Priority,,
-Set up Exotel SIP + Bangalore number,D,🔴 Blocker,,
-Fix 3 failing interruption scenarios (prompt tuning),D,🟡 Medium,,
-Run full 10-call test with real phone audio,B,🟡 Medium,,
-Remove emotion tags from ElevenLabs agent prompt,B,🟢 Low,,
-Upgrade Azure quota to avoid 429 rate limits,A,🟡 If chosen,,
-Drop Route C from production consideration,C,—,,
+Route,Score,Reliability,Cost/call (₹),Interruptions,Voice Quality,Verdict
+D,87/100,~95%,1.68,70%,4.0/5,Primary
+A,78/100,100%,50.40,100%,4.3/5,Premium option
+B,76/100,100%,11.76,100%,4.2/5,Backup
+C,38/100,4.4%,80.64,100%,3.5/5,Drop
